@@ -5,7 +5,10 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/Wuvist/goblog/models"
 	"github.com/Wuvist/goblog/static"
+	"github.com/volatiletech/sqlboiler/queries/qm"
+
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/labstack/echo"
 	"github.com/volatiletech/sqlboiler/boil"
@@ -42,7 +45,13 @@ func home(c echo.Context) error {
 }
 
 func blogger(c echo.Context) error {
-	return c.String(http.StatusOK, "bloger page")
+	bloggerID := c.QueryParam("id")
+	blogger, _ := models.BloggersG(qm.Where("id = ?", bloggerID)).One()
+	if blogger == nil {
+		return c.String(http.StatusNotFound, "找不到博客")
+	}
+
+	return c.String(http.StatusOK, blogger.Nick.String)
 }
 
 func cate(c echo.Context) error {
