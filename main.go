@@ -16,7 +16,7 @@ import (
 func main() {
 	// db
 	connstr := os.Getenv("connstr")
-	db, err := sql.Open("mysql", connstr)
+	db, err := sql.Open("mysql", connstr+"?parseTime=true")
 	if err != nil {
 		panic(err)
 	}
