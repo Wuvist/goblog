@@ -17,6 +17,23 @@ type Blog struct {
 	Adddate  string
 }
 
+func GetBlogComments(blogID int) []*Comment {
+	objs, _ := models.CommentsG(
+		qm.Where("`article` = ?", blogID),
+		qm.OrderBy("`index` desc")).All()
+
+	comments := make([]*Comment, len(objs))
+	for i := 0; i < len(objs); i++ {
+		c := &Comment{}
+		obj := objs[i]
+		c.Author = obj.Author.String
+		c.Content = obj.Content
+		c.Adddate = obj.AddDate.Format(dateFormat)
+		comments[i] = c
+	}
+	return comments
+}
+
 // NewBlogFromDb create blog struct from db model
 func NewBlogFromDb(data *models.Article) *Blog {
 	b := &Blog{}
@@ -32,6 +49,7 @@ func NewBlogFromDb(data *models.Article) *Blog {
 		b.CateID = cateData.Index
 		b.CateName = cateData.Cate
 	}
+
 	return b
 }
 

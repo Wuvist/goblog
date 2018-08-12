@@ -77,7 +77,7 @@ func blog(c echo.Context) error {
 
 	blogger := tpl.NewBloggerFromDb(bloggerData)
 	blog := tpl.NewBlogFromDb(blogData)
-	comments := []*tpl.Comment{}
+	comments := tpl.GetBlogComments(blogData.Index)
 
 	page := skins.Skin5_comment(blogger, blog, comments)
 
