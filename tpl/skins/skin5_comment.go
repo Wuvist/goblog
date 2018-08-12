@@ -1,4 +1,4 @@
-package tpl
+package skins
 
 import (
 	"bytes"
@@ -26,7 +26,7 @@ func Skin5_comment(blogger *tpl.Blogger, blog *tpl.Blog, comments []*tpl.Comment
 	_buffer.WriteString(gorazor.HTMLEscape(blog.Tags))
 	_buffer.WriteString("</div>\n\t   <div class=\"com\">")
 	_buffer.WriteString(gorazor.HTMLEscape(blogger.Nick))
-	_buffer.WriteString("\u3000@ ")
+	_buffer.WriteString(" @ ")
 	_buffer.WriteString(gorazor.HTMLEscape(blog.Adddate))
 	_buffer.WriteString("<br><a href='/")
 	_buffer.WriteString(gorazor.HTMLEscape(blogger.Username))
@@ -46,7 +46,7 @@ func Skin5_comment(blogger *tpl.Blogger, blog *tpl.Blog, comments []*tpl.Comment
 		_buffer.WriteString("<hr />\n\t   </div></div>\n\t\t")
 	}
 	_buffer.WriteString("\n</div>\n</div>\n</TD>\n<TD bgColor=\"#e0e0b1\" height=\"500\" width=\"150\" valign=\"top\"><div class=\"side\">\n<div class=\"sidetop\">\n 导航\n </div> \n  <a href=\"/\">博客风</a><BR>\n  <a href=\"/")
-	_buffer.WriteString(gorazor.HTMLEscape(blooger.Username))
+	_buffer.WriteString(gorazor.HTMLEscape(blogger.Username))
 	_buffer.WriteString("/\">")
 	_buffer.WriteString(gorazor.HTMLEscape(blogger.BlogName))
 	_buffer.WriteString("首页</a><BR>\n  <a>联系</a><BR>\n<br>\n\n<div class=\"sidetop\"><br>\n个人档案\n</div>\n<Acme:userpic runat=\"server\" ID=\"userpic1\" deco=\"<div align='center'><br><img src='\" enddeco=\"'></div>\"/>")

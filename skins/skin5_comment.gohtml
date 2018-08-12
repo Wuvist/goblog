@@ -29,7 +29,7 @@
 <p class="title">@blog.Title</p>
 	   @raw(blog.Content)
 	   <div id="tags">@blog.Tags</div>
-	   <div class="com">@blogger.Nick　@@ @blog.Adddate<br><a href='/@blogger.Username/cate@(blog.CateID).shtml'>查看本分类的所有网志:@(blog.CateName)</a></div><br><br>
+	   <div class="com">@blogger.Nick @@ @blog.Adddate<br><a href='/@blogger.Username/cate@(blog.CateID).shtml'>查看本分类的所有网志:@(blog.CateName)</a></div><br><br>
 	   @for _, comment := range comments {
 	   <div>
 	   <div class="post">	<div>@comment.Author 在 @comment.Adddate 说:</div>
@@ -45,7 +45,7 @@
  导航
  </div> 
   <a href="/">博客风</a><BR>
-  <a href="/@blooger.Username/">@blogger.BlogName首页</a><BR>
+  <a href="/@blogger.Username/">@blogger.BlogName首页</a><BR>
   <a>联系</a><BR>
 <br>
 
