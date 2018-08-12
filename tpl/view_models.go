@@ -5,7 +5,7 @@ import (
 	"github.com/volatiletech/sqlboiler/queries/qm"
 )
 
-var dateFormat string = "2006-01-02 15:04:05"
+var dateFormat = "2006-01-02 15:04:05"
 
 // Blog is the struture for displaying a blog
 type Blog struct {
@@ -21,9 +21,17 @@ type Blog struct {
 func NewBlogFromDb(data *models.Article) *Blog {
 	b := &Blog{}
 	b.Title = data.Title.String
+	if b.Title == "" {
+		b.Title = "无题"
+	}
 	b.Content = data.Content.String
 	b.Adddate = data.AddDate.Time.Format(dateFormat)
 
+	cateData, _ := models.UserdefinecategoriesG(qm.Where("`index` = ?", data.Cate.Int)).One()
+	if cateData != nil {
+		b.CateID = cateData.Index
+		b.CateName = cateData.Cate
+	}
 	return b
 }
 
