@@ -4,6 +4,7 @@ import (
 	"database/sql"
 	"net/http"
 	"os"
+	"strings"
 
 	"github.com/Wuvist/goblog/models"
 	"github.com/Wuvist/goblog/static"
@@ -64,6 +65,7 @@ func cate(c echo.Context) error {
 }
 
 func blog(c echo.Context) error {
+	blogerUsername := strings.ToLower(c.QueryParam("blogger"))
 	blogID := c.QueryParam("article_id")
 	blogData, err := models.ArticlesG(qm.Where("`index` = ?", blogID)).One()
 	if err != nil {
@@ -76,6 +78,10 @@ func blog(c echo.Context) error {
 	}
 
 	blogger := tpl.NewBloggerFromDb(bloggerData)
+	if strings.ToLower(blogger.Username) != blogerUsername {
+		return c.String(http.StatusNotFound, "找不到网志")
+	}
+
 	blog := tpl.NewBlogFromDb(blogData)
 	comments := tpl.GetBlogComments(blogData.Index)
 
