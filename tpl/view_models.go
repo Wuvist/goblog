@@ -35,6 +35,13 @@ func NewBlogFromDb(data *models.Article) *Blog {
 	return b
 }
 
+// Cate is blogger's own blog categories
+type Cate struct {
+	CateName  string
+	CateID    int
+	BlogCount int
+}
+
 // Blogger is the struture for blogger info
 type Blogger struct {
 	Username     string
@@ -42,6 +49,7 @@ type Blogger struct {
 	Info         string
 	Nick         string
 	VisitorCount int
+	Cates        []*Cate
 }
 
 // NewBloggerFromDb create blogger struct from db model
@@ -52,6 +60,18 @@ func NewBloggerFromDb(data *models.Blogger) *Blogger {
 	b.Info = data.Intro.String
 	b.BlogName = data.Blogname
 	b.VisitorCount = data.Visitor
+
+	objs, _ := models.UserdefinecategoriesG(qm.Where("`blogger` = ?", data.Index)).All()
+	b.Cates = make([]*Cate, len(objs))
+	for i := 0; i < len(objs); i++ {
+		cate := &Cate{}
+		obj := objs[i]
+		cate.CateName = obj.Cate
+		cate.CateID = obj.Index
+		cate.BlogCount = obj.Files
+		b.Cates[i] = cate
+	}
+
 	return b
 }
 

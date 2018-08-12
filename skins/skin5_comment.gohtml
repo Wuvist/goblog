@@ -58,19 +58,17 @@
 <br><br><br><div class="sidetop">
 网志分类
 </div>
-<asp:Repeater id="dlCate" runat="server">
-<ItemTemplate>
-	<a href = "/<%# uid & "/cate" & Container.DataItem("index") %>.shtml" ><%# Container.DataItem("cate") %></a>(<%# Container.DataItem("files") %>)<br>
-</ItemTemplate>
-</asp:Repeater>
+@for _, cate := range blogger.Cates {
+	<a href = "/@blogger.Username/cate@(cate.CateID).shtml" >@cate.CateName</a><span>(</span>@cate.BlogCount<span>)</span><br>
+}
 <br><br><br><div class="sidetop">
 网志存档
 </div>
-<asp:Repeater id="archive" runat="server">
+<!-- <asp:Repeater id="archive" runat="server">
 	<ItemTemplate>
 		<a href = "/<%# uid & "/" & Container.DataItem("year") %>/<%# Container.DataItem("month") %>/" ><%# Container.DataItem("year") %>年<%# Container.DataItem("month") %>月</a><br>
 	</ItemTemplate>
-</asp:Repeater>
+</asp:Repeater> -->
 
 <br><br><br><div class="sidetop">
 个人链接

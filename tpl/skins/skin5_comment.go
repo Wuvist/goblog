@@ -51,7 +51,20 @@ func Skin5_comment(blogger *tpl.Blogger, blog *tpl.Blog, comments []*tpl.Comment
 	_buffer.WriteString(gorazor.HTMLEscape(blogger.BlogName))
 	_buffer.WriteString("首页</a><BR>\n  <a>联系</a><BR>\n<br>\n\n<div class=\"sidetop\"><br>\n个人档案\n</div>\n<Acme:userpic runat=\"server\" ID=\"userpic1\" deco=\"<div align='center'><br><img src='\" enddeco=\"'></div>\"/>")
 	_buffer.WriteString(gorazor.HTMLEscape(blogger.Info))
-	_buffer.WriteString("\n<br>\n<br><br><br><div class=\"sidetop\">\n网志分类\n</div>\n<asp:Repeater id=\"dlCate\" runat=\"server\">\n<ItemTemplate>\n\t<a href = \"/<%# uid & \"/cate\" & Container.DataItem(\"index\") %>.shtml\" ><%# Container.DataItem(\"cate\") %></a>(<%# Container.DataItem(\"files\") %>)<br>\n</ItemTemplate>\n</asp:Repeater>\n<br><br><br><div class=\"sidetop\">\n网志存档\n</div>\n<asp:Repeater id=\"archive\" runat=\"server\">\n\t<ItemTemplate>\n\t\t<a href = \"/<%# uid & \"/\" & Container.DataItem(\"year\") %>/<%# Container.DataItem(\"month\") %>/\" ><%# Container.DataItem(\"year\") %>年<%# Container.DataItem(\"month\") %>月</a><br>\n\t</ItemTemplate>\n</asp:Repeater>\n\n<br><br><br><div class=\"sidetop\">\n个人链接\n</div>\n<asp:Repeater id=\"links\" runat=\"server\">\n\t<ItemTemplate>\n\t\t<a href = \"<%# Container.DataItem(\"URL\") %>\" target=\"_blank\"><%# Container.DataItem(\"link\") %></a><br>\n\t</ItemTemplate>\n</asp:Repeater>\n<p class=\"nav\">累计浏览: ")
+	_buffer.WriteString("\n<br>\n<br><br><br><div class=\"sidetop\">\n网志分类\n</div>")
+	for _, cate := range blogger.Cates {
+
+		_buffer.WriteString("<a href = \"/")
+		_buffer.WriteString(gorazor.HTMLEscape(blogger.Username))
+		_buffer.WriteString("/cate")
+		_buffer.WriteString(gorazor.HTMLEscape((cate.CateID)))
+		_buffer.WriteString(".shtml\" >")
+		_buffer.WriteString(gorazor.HTMLEscape(cate.CateName))
+		_buffer.WriteString("</a><span>(</span>")
+		_buffer.WriteString(gorazor.HTMLEscape(cate.BlogCount))
+		_buffer.WriteString("<span>)</span><br>")
+	}
+	_buffer.WriteString("\n<br><br><br><div class=\"sidetop\">\n网志存档\n</div>\n<!-- <asp:Repeater id=\"archive\" runat=\"server\">\n\t<ItemTemplate>\n\t\t<a href = \"/<%# uid & \"/\" & Container.DataItem(\"year\") %>/<%# Container.DataItem(\"month\") %>/\" ><%# Container.DataItem(\"year\") %>年<%# Container.DataItem(\"month\") %>月</a><br>\n\t</ItemTemplate>\n</asp:Repeater> -->\n\n<br><br><br><div class=\"sidetop\">\n个人链接\n</div>\n<asp:Repeater id=\"links\" runat=\"server\">\n\t<ItemTemplate>\n\t\t<a href = \"<%# Container.DataItem(\"URL\") %>\" target=\"_blank\"><%# Container.DataItem(\"link\") %></a><br>\n\t</ItemTemplate>\n</asp:Repeater>\n<p class=\"nav\">累计浏览: ")
 	_buffer.WriteString(gorazor.HTMLEscape(blogger.VisitorCount))
 	_buffer.WriteString("</p>\n<br>\n<br>\n</div>\n</TD>\n</TR>\n</TABLE>\n</body>\n</html>")
 
