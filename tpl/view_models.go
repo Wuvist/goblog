@@ -1,6 +1,9 @@
 package tpl
 
-import "github.com/Wuvist/goblog/models"
+import (
+	"github.com/Wuvist/goblog/models"
+	"github.com/volatiletech/sqlboiler/queries/qm"
+)
 
 var dateFormat string = "2006-01-02 15:04:05"
 
@@ -26,10 +29,11 @@ func NewBlogFromDb(data *models.Article) *Blog {
 
 // Blogger is the struture for blogger info
 type Blogger struct {
-	Username string
-	BlogName string
-	Info     string
-	Nick     string
+	Username     string
+	BlogName     string
+	Info         string
+	Nick         string
+	VisitorCount int
 }
 
 // NewBloggerFromDb create blogger struct from db model
@@ -39,6 +43,7 @@ func NewBloggerFromDb(data *models.Blogger) *Blogger {
 	b.Nick = data.Nick.String
 	b.Info = data.Intro.String
 	b.BlogName = data.Blogname
+	b.VisitorCount = data.Visitor
 	return b
 }
 
