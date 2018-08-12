@@ -1,0 +1,368 @@
+BODY {
+	FONT-SIZE: 12px; COLOR: #333333; LINE-HEIGHT: 150%
+}
+TD {
+	FONT-SIZE: 12px; COLOR: #333333; LINE-HEIGHT: 150%
+}
+A {
+	FONT-SIZE: 12px; COLOR: #333333; LINE-HEIGHT: 150%
+}
+A {
+	TEXT-DECORATION: none
+}
+.loginput
+{
+border: 1px solid #AAAAAA;
+WIDTH: 96px;
+}
+.logbutton
+{
+border: 1px solid #AAAAAA;
+background-color:  grey;
+font-family:宋体; font-size: 12px; line-height: 15px;
+}
+FORM {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.sysHand {
+	CURSOR: hand
+}
+.sysBr {
+	TABLE-LAYOUT: fixed; OVERFLOW: hidden; TEXT-OVERFLOW: ellipsis; WORD-WRAP: break-word
+}
+.sysBr180 {
+	TABLE-LAYOUT: fixed; OVERFLOW: hidden; WIDTH: 180px; TEXT-OVERFLOW: ellipsis; WORD-WRAP: break-word
+}
+.sysBr210 {
+	TABLE-LAYOUT: fixed; OVERFLOW: hidden; WIDTH: 210px; TEXT-OVERFLOW: ellipsis; WORD-WRAP: break-word
+}
+.sysBr476 {
+	TABLE-LAYOUT: fixed; OVERFLOW: hidden; WIDTH: 476px; TEXT-OVERFLOW: ellipsis; WORD-WRAP: break-word
+}
+.sysBr500 {
+	TABLE-LAYOUT: fixed; OVERFLOW: hidden; WIDTH: 500px; TEXT-OVERFLOW: ellipsis; WORD-WRAP: break-word
+}
+.sysLeft {
+	FLOAT: left
+}
+.sysBoth {
+	CLEAR: both
+}
+.sysW770 {
+	WIDTH: 770px
+}
+.box_1 {
+	WIDTH: 210px; TEXT-ALIGN: left
+}
+.box_1 .margin {
+	PADDING-LEFT: 3px
+}
+.box_2 {
+	TEXT-ALIGN: center
+}
+.box_2 .margin {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px
+}
+.man {
+	MARGIN: 0px 5px
+}
+.dashed {
+	
+}
+.line {
+	HEIGHT: 2px
+}
+.bodyBox {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(/images/skins/skin22/1.jpg); MARGIN-LEFT: 0px; MARGIN-RIGHT: 0px; TEXT-ALIGN: center
+}
+.bodyTop {
+	BACKGROUND: url(/images/skins/skin22/bodyTop.gif); WIDTH: 770px; HEIGHT: 20px
+}
+.bodyBg {
+	BACKGROUND: url(/images/skins/skin22/bodyBg.gif); WIDTH: 770px
+}
+.bodyBottom {
+	BACKGROUND: url(/images/skins/skin22/bodyBottom.gif); WIDTH: 770px; HEIGHT: 40px
+}
+.banner {
+	BACKGROUND: url(/images/skins/skin22/11.jpg) #fff no-repeat center 50%; WIDTH: 770px; HEIGHT: 135px;
+}
+.banner TABLE {
+	BORDER-RIGHT: #000 1px solid; BORDER-TOP: #000 1px solid; BACKGROUND: #fff; FILTER: alpha(opacity=70); BORDER-LEFT: #000 1px solid; LINE-HEIGHT: 30px; BORDER-BOTTOM: #000 1px solid; moz-opacity: 0.7
+}
+.banner .title {
+	MARGIN-TOP: 20px; FONT-WEIGHT: bold; MARGIN-LEFT: 120px
+}
+.banner .title TD {
+	FONT-SIZE: 16px
+}
+.banner .link {
+	MARGIN-TOP: 10px; MARGIN-LEFT: 180px;WORD-BREAK: break-all; WORD-WRAP: break-word;width:530px;
+}
+.banner .link A {
+	COLOR: #000
+}
+.menu {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; BACKGROUND: url(/images/skins/skin22/1.gif) no-repeat center 50%; PADDING-BOTTOM: 0px; WIDTH: 770px; COLOR: #444444; PADDING-TOP: 0px; HEIGHT: 30px
+}
+.menu .home {
+	COLOR: #ffffff; FONT-FAMILY: "Courier New", "Courier", "monospace"
+}
+.menu .text {
+	COLOR: #ffffff
+}
+.menu A {
+	FONT-SIZE: 10px; COLOR: #ffffff; FONT-FAMILY: Arial,Serif
+}
+.menu .text A {
+	FONT-SIZE: 12px
+}
+.zone {
+	WIDTH: 210px
+}
+.label {
+	WIDTH: 210px
+}
+.label .mid {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; BACKGROUND: url(/images/skins/skin22/1Bg.gif) no-repeat center top; PADDING-BOTTOM: 8px; LINE-HEIGHT: normal; PADDING-TOP: 8px; TEXT-ALIGN: left
+}
+.label .top {
+	HEIGHT: 1px
+}
+.label .bottom {
+	HEIGHT: 1px
+}
+.photo {
+	WIDTH: 210px
+}
+.photo .mid {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(/images/skins/skin22/1Bg.gif) no-repeat center top; PADDING-BOTTOM: 15px; PADDING-TOP: 15px
+}
+.photo .image {
+	OVERFLOW: hidden; WIDTH: 200px
+}
+.photo .mid TABLE {
+	WIDTH: 200px; WORD-WRAP: break-word
+}
+.photo .top {
+	HEIGHT: 1px
+}
+.photo .bottom {
+	HEIGHT: 1px
+}
+.photo .infoText {
+	PADDING-RIGHT: 0px; BORDER-TOP: #6a6a6a 1px dashed; PADDING-LEFT: 0px; PADDING-BOTTOM: 4px; MARGIN: 8px 0px; PADDING-TOP: 4px; BORDER-BOTTOM: #6a6a6a 1px dashed; TEXT-ALIGN: center
+}
+.photo TABLE {
+	COLOR: #333333
+}
+.links {
+	WIDTH: 210px
+}
+.links .up {
+	BACKGROUND: url(/images/skins/skin22/1Up.gif); HEIGHT: 34px
+}
+.nav {
+	BACKGROUND: url(/images/skins/skin22/tdown.gif); HEIGHT: 34px;PADDING-LEFT: 4px; FONT-WEIGHT: bold; COLOR: #000; PADDING-TOP: 2px;
+}
+.links .down {
+	BACKGROUND: url(/images/skins/skin22/1Down.gif); HEIGHT: 34px
+}
+.links .text {
+	PADDING-LEFT: 4px; FONT-WEIGHT: bold; COLOR: #000; PADDING-TOP: 2px; HEIGHT: 22px
+}
+.links .mid {
+	BACKGROUND: url(/images/skins/skin22/1Bg.gif) no-repeat center top
+}
+.links .wd {
+	WIDTH: 200px
+}
+.links .wd TR {
+	HEIGHT: 22px
+}
+.links .ico {
+	COLOR: #cd3f3f
+}
+.links .dashed {
+	COLOR: #333333
+}
+.links .more {
+	BACKGROUND: url(/images/skins/skin22/more.gif) no-repeat right 50%; WIDTH: 38px; HEIGHT: 18px
+}
+.links A {
+	COLOR: #333333
+}
+.links .desc {
+	COLOR: #999999
+}
+.article .up {
+	COLOR: #000000
+}
+.article .down {
+	COLOR: #333333
+}
+.comment .up {
+	COLOR: #000000
+}
+.comment .down {
+	COLOR: #000000
+}
+.comment .iUp {
+	COLOR: #000000
+}
+.comment .iDown {
+	COLOR: #000000
+}
+.feeds .up {
+	COLOR: #000000
+}
+.feeds .down {
+	COLOR: #000000
+}
+.article {
+	MARGIN-BOTTOM: 2px; WIDTH: 550px; TEXT-ALIGN: center
+}
+.article .path {
+	TEXT-INDENT: 12px; HEIGHT: 30px
+}
+.article .dashed {
+	DISPLAY: none
+}
+.article .form {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.article TABLE {
+	FONT-SIZE: 12px; WIDTH: 100%
+}
+.article .title {
+	FONT-WEIGHT: bold; COLOR: #000; TEXT-INDENT: 36px; LINE-HEIGHT: 30px; HEIGHT: 28px
+}
+.article .up {
+	BACKGROUND: url(/images/skins/skin22/1Up.gif) no-repeat center 50%
+}
+.article .down {
+	BACKGROUND: url(/images/skins/skin22/1Down.gif) no-repeat center 50%
+}
+.article .author {
+	COLOR: #606060; HEIGHT: 24px; TEXT-ALIGN: right
+}
+.article .time {
+	FONT-SIZE: 11px
+}
+.article .aBody TABLE {
+	PADDING-LEFT: 2px; WIDTH: 530px; COLOR: #000
+}
+.article .aSize {
+	HEIGHT: 20px
+}
+.article .aSize A {
+	COLOR: #606060
+}
+.article .itemBox {
+	TEXT-ALIGN: center
+}
+.article .itemBox TABLE {
+	WIDTH: 530px; COLOR: #000
+}
+.article .text {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 2px; PADDING-BOTTOM: 18px; OVERFLOW: hidden; WIDTH: 500px; COLOR: #202020; WORD-BREAK: break-all; PADDING-TOP: 14px
+}
+.article .text FONT {
+	LINE-HEIGHT: normal
+}
+.article .text A {
+	COLOR: #111133; TEXT-DECORATION: underline
+}
+.article .function {
+	HEIGHT: 30px; TEXT-ALIGN: right
+}
+.article .function TD {
+	COLOR: #000
+}
+.article .function A {
+	COLOR: #000
+}
+.article .page A {
+	MARGIN: 0px 5px
+}
+.article .page SPAN {
+	FONT-WEIGHT: bold; MARGIN: 0px 5px; COLOR: red
+}
+.comment {
+	WIDTH: 550px
+}
+.comment .title TD {
+	FONT-WEIGHT: bold; COLOR: #000; TEXT-INDENT: 36px
+}
+.comment .up {
+	BACKGROUND: url(/images/skins/skin22/1Up.gif) no-repeat center 50%; WIDTH: 550px; HEIGHT: 28px
+}
+.comment .down {
+	BACKGROUND: url(/images/skins/skin22/1Down.gif) no-repeat center 50%; WIDTH: 550px; HEIGHT: 28px
+}
+.comment .alt {
+	COLOR: #afafaf; LINE-HEIGHT: 30px; TEXT-ALIGN: center
+}
+.comment .dashed {
+	BORDER-BOTTOM: #6a6a6a 1px dashed; HEIGHT: 1px
+}
+.comment .item {
+	WIDTH: 520px
+}
+.comment .iTitle {
+	FONT-WEIGHT: bold; COLOR: #666699; TEXT-INDENT: 5px; LINE-HEIGHT: 26px; HEIGHT: 30px
+}
+.comment .iText {
+	OVERFLOW: hidden; WORD-BREAK: break-all; WORD-WRAP: break-word
+}
+.comment .iPubdate {
+	FONT-SIZE: 11px
+}
+.comment .iUp {
+	BACKGROUND: url(/images/skins/skin22/comment/1iUp.gif)
+}
+.comment .iDown {
+	BACKGROUND: url(/images/skins/skin22/comment/1iDown.gif)
+}
+.comment .itemBody {
+	PADDING-RIGHT: 21px; PADDING-LEFT: 21px; PADDING-BOTTOM: 0px; WIDTH: 540px; PADDING-TOP: 0px; HEIGHT: 30px
+}
+.comment .itemBody TD {
+	COLOR: #666
+}
+.comment .iBottom {
+	WIDTH: 520px; HEIGHT: 1px
+}
+.comment .del {
+	BACKGROUND: url(/images/skins/skin22/del.gif) no-repeat; WIDTH: 11px; HEIGHT: 10px
+}
+.comment .post {
+	HEIGHT: 17px; TEXT-ALIGN: center
+}
+.comment .page {
+	COLOR: #858585
+}
+.comment .page A {
+	MARGIN: 0px 5px; COLOR: #858585; TEXT-DECORATION: none
+}
+.comment .page SPAN {
+	FONT-WEIGHT: bold; MARGIN: 0px 5px; COLOR: red
+}
+.comment .postBox {
+	PADDING-RIGHT: 26px; PADDING-LEFT: 26px; PADDING-BOTTOM: 20px; PADDING-TOP: 0px
+}
+.comment .postFSet {
+	BORDER-RIGHT: #999999 1px dashed; PADDING-RIGHT: 35px; BORDER-TOP: #999999 1px dashed; PADDING-LEFT: 35px; PADDING-BOTTOM: 10px; BORDER-LEFT: #999999 1px dashed; COLOR: #222222; PADDING-TOP: 20px; BORDER-BOTTOM: #999999 1px dashed
+}
+.comment .postFSet LEGEND {
+	FONT-WEIGHT: bold; COLOR: #000000
+}
+.comment INPUT {
+	FONT-SIZE: 12px
+}
+.comment .post {
+	BACKGROUND: url(/images/skins/skin22/1Post.gif) no-repeat center 50%; PADDING-TOP: 2px; HEIGHT: 30px; TEXT-ALIGN: center
+}
+.comment TEXTAREA {
+	SCROLLBAR-FACE-COLOR: #fff; FONT-SIZE: 12px; SCROLLBAR-HIGHLIGHT-COLOR: #c1c1bb; OVERFLOW: auto; WIDTH: 412px; SCROLLBAR-SHADOW-COLOR: #c1c1bb; SCROLLBAR-3DLIGHT-COLOR: #ebebe4; SCROLLBAR-ARROW-COLOR: #cacab7; SCROLLBAR-TRACK-COLOR: #f4f4f0; SCROLLBAR-DARKSHADOW-COLOR: #ebebe4; HEIGHT: 200px
+}

@@ -1,0 +1,239 @@
+.loginput
+{
+border: 1px solid #AAAAAA;
+WIDTH: 96px;
+}
+.logbutton
+{
+border: 1px solid #AAAAAA;
+background-color:  grey;
+font-family:宋体; font-size: 12px; line-height: 15px;
+}
+body, html {
+background:#020202 url(/images/skins/skin24.jpg) no-repeat;
+    color: #a59e94;
+    font-family:ms shell dlg;
+    font-size:14px;
+    margin: 0;
+    line-height:150%;padding:0 ;
+    text-align:center
+   
+}
+#nadframe{display:none}
+form{
+margin-right: auto;
+margin-left: auto;
+font-size:14px;
+}
+
+.pagelayout{
+    margin: auto;
+    padding:0px 0px 0px 0px;
+    width: 95%;
+    font-size:16px;
+    text-align:left;
+
+}
+a:visited, a:active, a:link {   
+    color : #75824C;
+    text-decoration : none;
+}
+
+a:hover {
+    color: #75824C;
+    text-decoration :none;
+    border-bottom:1px dotted #333
+}
+
+blockquote {
+    font-style : italic;
+}
+
+#header {
+
+  color: #808080;
+  font-size:14px;
+  font-family:ms shell dlg;
+  padding-top:0px;
+  padding-right:20px;
+  background:none;
+  height:250px ;width:735px
+}
+#header span{float:left;padding-top:198px;padding-left:100px}
+#header #Header1_HeaderTitle{
+color: #000000;
+ font-size:16px;font-family:arial;line-height:120%;font-weight:bold;color:#D44F3C
+}
+#main {float:left;padding: 15px 0px 0px 15px;width:80%;font-size:14px;line-height:160%;color: #a59e94;word-wrap:break-word;
+
+}
+#footer{clear:both;border-top:3px solid #c0c0c0;padding-top:10px;text-align:center;font-size:12px}
+
+#menu {clear:both;padding:0;
+    float:right;
+    width:16%;padding-top:15px;
+word-wrap:break-word;
+border-left:1px dotted #c0c0c0;padding-left:5px
+}
+#menu h1 {
+color:#808080;font-weight:bold;
+    font-size: 14px;
+    margin: 0px;
+    height:21px;
+    border-bottom:1px dotted #808080
+}
+
+#menu h3 {
+    color:#808080;font-weight:bold;
+    font-size: 14px;
+    margin: 0px;
+    height:21px;
+    border-bottom:1px dotted #808080
+ 
+}
+#menu ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px 0px 15px 5px;
+    font-size: 14px;
+}
+#comments{font-size:12px;line-height:150%}
+#comments a{font-weight:bold}
+.postTitle{font-weight:bold}
+.postTitle a,.postTitle a:link,.postTitle a:visited{color:#75824C;font-size:14px}
+
+
+div,select,input{font-size:12px;word-wrap:break-word;}
+div.block {
+  font-size: 14px;
+  text-align: justify;
+}
+
+div.block_footer {
+
+  height: 67px;
+}
+
+div.post {
+  padding-left: 0px;
+}
+
+.dateTitle{color:#808080;font-size:16px;font-weight:bold;line-height:280%}
+div.posttitle {
+  color: #75824C;
+    font-family: "ms shell dlg";
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.posttitle{height:30px;}
+div.postText{line-height:160%;font-size:14px;}
+.posttitle a:visited, .posttitle a:active, .posttitle a:link {  
+    color:#75824C;
+    text-decoration : none;
+}
+
+.posttitle a:hover {
+    color: #75824C;
+    text-decoration : none;padding:3px;
+    border-bottom:1px dotted #75824C;
+}
+.postFoot{line-height:120%;border-bottom:1px dotted #808080;font-size:14px;}
+div.itemdesc {
+  color: #808080;
+  font-size: 14px;
+    text-transform: uppercase;
+}
+
+div.seperator {
+  
+  background-position: top left;
+  background-repeat: no-repeat;
+  margin: 15px 0px 10px 0px;
+}
+
+div.entrylistitem {
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+a.entrylisttitle, a.entrylisttitle:visited, a.entrylisttitle:link, a.entrylisttitle:active {
+  color: #FF6600;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+div.moreinfo {
+  font-size: 14px;
+  text-align: justify;
+}
+
+div.moreinfotitle {
+    color: #FF2a00;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+div.comments {
+  font-size: 12px
+}
+
+div.comment {
+font-size:12px;
+  border: 0px dotted #DDDDDD;
+  margin: 10px 0px 10px 0px;
+  padding: 10px;
+}
+
+div.comment_author {
+  margin: 5px 0px 5px 0px;font-size:12px;
+}
+
+div.comment_content {
+  margin: 5px 0px 5px 0px;font-size:12px;
+}
+
+#postcomment {
+    border: 0px solid #DDDDDD;
+  font-size: 12px;
+  padding: 10px;
+  text-align: justify;
+  margin-top: 15px;
+  width: 435px;
+}
+
+#postcomment div {
+    color: #808080;
+  font-size: 12px;
+    font-weight: bold;
+  margin: 5px 0px 5px 0px;
+}
+
+#postcomment input.text, textarea {
+  border: 1px solid #DDDDDD;
+  font-size: 14px;
+}
+
+input.text {
+    width : 300px;  
+}
+
+textarea {
+    width : 300px;
+    height : 200px;  
+}
+
+#relatedlinks ul {
+    list-style : none;
+    margin-left : 10px;
+    padding : 0px;
+}
+
+span.highlight
+{
+    background-color:Yellow;      
+}
+.block_title{font-size:14px;font-weight:bold}
+.code{float:left;width:90%;padding:10px;border:1px dotted #75824C;}
+.postFoot{clear:both;padding-top:6px}
+br{clear:both;}

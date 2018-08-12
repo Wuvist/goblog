@@ -1,0 +1,12 @@
+# Helicon ISAPI_Rewrite configuration file
+# Version 3.0.0.27
+
+RewriteEngine On
+RewriteBase 
+# unsupported directive: [ISAPI_Rewrite]
+
+#  Defend your computer from some worm attacks
+#  RewriteRule .*(?:global.asa|default\.ida|root\.exe|\.\.).* . [F,I,O]
+
+RewriteProxy (.*) http\://www.blogwind.com:8888$1 [I,P]
+#RewriteProxy (.*) http\://175.156.193.128:8080/$1 [I,P]

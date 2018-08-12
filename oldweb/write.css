@@ -1,0 +1,16 @@
+BODY { BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; SCROLLBAR-FACE-COLOR: #85a2e0; FONT-SIZE: 10.5pt; PADDING-BOTTOM: 0px; MARGIN: 5px; BORDER-LEFT: 0px; COLOR: #3e62db; LINE-HEIGHT: 150%;PADDING-TOP: 0px; BORDER-BOTTOM: 0px; FONT-FAMILY:"Palatino Linotype",simsun,Palatino, serif,"宋体"; BACKGROUND-COLOR: #ffffff }
+.sim { BORDER-RIGHT: #aaaaaa 1px solid; BORDER-TOP: #aaaaaa 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #aaaaaa 1px solid; WIDTH: 80px; LINE-HEIGHT: 15px; BORDER-BOTTOM: #aaaaaa 1px solid; FONT-FAMILY: 宋体; BACKGROUND-COLOR: #d9e3ff }
+.title { WIDTH: 280px; MaxLength: 50 }
+.sidediv { PADDING-LEFT: 5px; VISIBILITY: visible; OVERFLOW: auto; WIDTH: 140px; HEIGHT: 350px }
+.text { PADDING-LEFT: 10px;}
+.menu A:link,.menu A:active,.menu A:visited{TEXT-DECORATION:none ;Color:#3e62db},.menu a:hover{TEXT-DECORATION: underline;Color:red}
+A:link,A:active,A:visited{TEXT-DECORATION:none ;Color:b00}
+A:hover{TEXT-DECORATION: underline;Color:red}
+.b { BORDER-RIGHT: #aaaaaa 2px solid; BORDER-TOP: #aaaaaa 1px solid; FONT-SIZE: 14pt; BORDER-LEFT: #aaaaaa 1px solid; LINE-HEIGHT: 19pt;font-weight:bold; BORDER-BOTTOM: #aaaaaa 2px solid; FONT-FAMILY: 宋体; BACKGROUND-COLOR: #d9e3ff }
+.bb { BORDER-RIGHT: #aaaaaa 2px solid; BORDER-TOP: #aaaaaa 1px solid; FONT-SIZE: 12pt; BORDER-LEFT: #aaaaaa 1px solid; WIDTH: 80px; LINE-HEIGHT: 19pt; BORDER-BOTTOM: #aaaaaa 2px solid; FONT-FAMILY: 宋体; BACKGROUND-COLOR: #d9e3ff }
+INPUT {
+PADDING-LEFT: 1px; PADDING-RIGHT: 1px; FONT-SIZE: 11px; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma, Verdana, "宋体"; BACKGROUND-COLOR: #ffffff
+}
+TEXTAREA {
+	BORDER-RIGHT: #c0c0c0 1px solid; BORDER-TOP: #c0c0c0 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #c0c0c0 1px solid; COLOR: #000000; BORDER-BOTTOM: #c0c0c0 1px solid; FONT-FAMILY: Tahoma, Verdana, "宋体"; BACKGROUND-COLOR: #ffffff
+}

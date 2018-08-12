@@ -1,0 +1,107 @@
+.logbutton
+{
+border: 1px solid #333333;background-color: #666666;
+font-family:宋体; font-size: 12px; line-height: 15px;font-color:#cccccc;
+}
+
+.loginput
+{
+BORDER: #333333 1px solid;
+WIDTH: 120px;
+}
+.log
+{
+font-family: 宋体;
+font-size:12px;
+text-align:left;
+line-height: 14px;
+}
+
+.tab
+{
+font-family: 宋体;
+font-size:14px;
+text-align:left;
+line-height: 14px;
+color:#cccccc;
+}
+
+.blog {
+	font-family:宋体, "华文宋体", "华文楷体", "serif", "sans-serif", "Times New Roman";
+	font-size: 14px;
+	color: #333333;
+	text-align: left;
+
+}
+
+.head {
+font-size: 12pt; 
+text-decoration:bold;
+color: #333333; 
+}
+
+.PostFooter
+{
+font-family: georgia, Verdana, Arial, Helvetica, sans-serif,宋体;
+font-size:12px;
+text-align: right;
+}
+
+.DateHeader
+{
+font-family: 宋体;
+text-align:left;
+line-height: 16pt;
+font-weight: bold; 
+font-size : 12px; 
+color : #333333;
+
+}
+
+.header {
+color: #333333;
+font-size: 30pt;
+font-family: georgia, Arial, Helvetica, sans-serif;
+font: bold;
+border: thin none #333333;
+line-height: 120%;
+text-align: right;
+padding-left: 20px;
+padding-right: 20px
+}
+
+body {
+	scrollbar-arrow-color:#666666;
+	scrollbar-base-color:#888888;
+	scrollbar-face-color:#999999;
+	scrollbar-highlight-color:#999999;
+	scrollbar-shadow-color:#999999;
+	background:#999999;
+	font-family: 宋体,"华文宋体", "华文楷体", "serif", "sans-serif", "Times New Roman";
+	font-size: 14px;
+	color: #333333;
+
+
+}
+a{
+	TEXT-DECORATION:none;
+	color: #333333;
+}
+a:hover{
+	color:#333333;
+	text-decoration: underline overline;
+}
+
+td {
+	border: 1px dashed #666666;
+}
+
+textarea, input, select {
+font-family : 宋体,verdana, arial; 
+border-color: #666666;   
+border-style: dashed; 
+border-top-width: 1px; 
+border-left-width: 1px;
+border-right-width: 1px; 
+border-bottom-width: 1px; 
+} 

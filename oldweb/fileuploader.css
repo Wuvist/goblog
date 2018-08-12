@@ -1,0 +1,11 @@
+#root { FILTER: progid:DXImageTransform.Microsoft.Shadow(color=gray,direction=135,strength=3); WIDTH: 220px; BORDER-BOTTOM: #5373ad 1px solid;}
+#handle { FONT-SIZE: 5pt; WIDTH: 220px }
+.progressBar { BORDER-RIGHT: #5373ad 1px solid; BORDER-TOP: #5373ad 1px solid; BORDER-LEFT: #5373ad 1px solid; WIDTH: 200px; BORDER-BOTTOM: #5373ad 1px solid; HEIGHT: 20px; BACKGROUND-COLOR: #ecf3e1 }
+.indicator { FLOAT: left; BACKGROUND-IMAGE: url(images/Indicatorbg.gif); BACKGROUND-REPEAT: repeat-x; HEIGHT: 18px }
+.info { PADDING-RIGHT: 2px; PADDING-LEFT: 2px; FONT-SIZE: 10pt; PADDING-BOTTOM: 2px; OVERFLOW: hidden; WIDTH: 200px; PADDING-TOP: 2px; FONT-FAMILY: MS Sans Serif; TEXT-OVERFLOW: ellipsis; TEXT-ALIGN: left }
+#btn_cancel { FONT-SIZE: 10pt; FONT-FAMILY: MS Sans Serif }
+#root A { COLOR: #6b92f4; TEXT-DECORATION: none }
+#root A:visited { COLOR: #6b92f4 }
+#root A:hover { COLOR: #6b92f4; TEXT-DECORATION: underline }
+.b { BORDER-RIGHT: #aaaaaa 1px solid; BORDER-TOP: #aaaaaa 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #aaaaaa 1px solid; WIDTH: 35px; LINE-HEIGHT: 15px; BORDER-BOTTOM: #aaaaaa 1px solid; FONT-FAMILY: ËÎÌו; BACKGROUND-COLOR: #d9e3ff }
+.up { BORDER-RIGHT: #aaaaaa 1px solid; BORDER-TOP: #aaaaaa 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #aaaaaa 1px solid; WIDTH: 160px; BORDER-BOTTOM: #aaaaaa 1px solid;}

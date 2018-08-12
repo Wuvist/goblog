@@ -1,0 +1,244 @@
+
+.loginput
+{
+	border:thin #FFB87B 1px solid; 
+	WIDTH: 96px;
+}
+.logbutton
+{
+	border:thin #FFB87B 1px solid; 
+	background:#FFFFFF;
+	font-family:nsimsun; font-size: 9pt; line-height: 15px;
+}
+body, html {
+    background: url(/images/skins/skin25/o_wowbg.jpg) #000000 center top;
+    color: #787878;
+    font-family:nsimsun;
+    font-size:10.5pt;
+    margin: 0;
+    line-height:150%;padding:0px
+}
+#nadframe{display:none}
+form{
+magrin:0;
+font-size:12pt;
+padding:0px
+}
+
+.pagelayout{
+    margin: auto;
+    padding:0px 0px 0px 0px;
+    width: 1004px;
+    font-size:12pt;	
+}
+a:visited, a:active, a:link {   
+    color : #70472A;
+    text-decoration : none;
+}
+
+a:hover {
+    color: #999966;
+}
+
+blockquote {
+    font-style : italic;
+}
+
+#header {
+  text-align:center;
+  color:#000000;
+  font-size:10.5pt;
+  font-family:nsimsun;
+  padding-top:0px;
+  padding-right:20px;
+  height:150px ;
+  background: url(/images/skins/skin25/o_wowhead.jpg) #000000 no-repeat center top;
+  border-bottom: 0px solid #E4E5E5;
+}
+#header span{float:left;padding-top:38px;text-align:center;width:100%;}
+#header #Header1_HeaderTitle{
+    color: #000000;
+    font-size:12pt;font-family:arial;line-height:120%;font-weight:bold;color:#FABB0B
+}
+#main {
+   float:left;padding: 10px 0px 0px 25px;width:65%;font-size:12pt;line-height:160%;color:#333333;word-wrap:break-word;
+}
+#footer{clear:both;text-align:center;font-size:10.5pt;width:100%;
+    height:100px;
+    padding-top:60px;margin:0px;
+    background: url(/images/skins/skin25/o_wowbg_foot.jpg) #000000 no-repeat;
+}
+
+#menu {clear:both;padding:0;
+    float:left;
+    width:250px;
+    padding-top:10px;
+    word-wrap:break-word;
+    border-right:1px dotted #c0c0c0;
+}
+
+#menu h1 {
+    color:#E3D8B7;
+    padding:8px 0px 0px 18px;
+    font-size: 12pt;
+    font-weight: bold;
+    margin: 0px 0px 15px 60px;
+    height:30px;
+    background:url(/images/skins/skin25/o_wowmenu_bg_blue.jpg) no-repeat;
+}
+
+#menu h3 {
+    color:#E3D8B7;
+    padding:8px 0px 0px 18px;
+    font-size: 12pt;
+    font-weight: bold;
+    margin: 0px 0px 15px 60px;
+    height:30px;
+    background:url(/images/skins/skin25/o_wowmenu_bg_red.jpg) no-repeat;
+}
+#menu ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px 0px 15px 60px;
+    font-size: 10.5pt;
+
+}
+#comments{font-size:10.5pt;line-height:150%}
+#comments a{font-weight:bold}
+.postTitle{font-weight:bold;background:url(/images/skins/skin25/o_wowwhite_icon_ball.gif) no-repeat;padding-left:20px}
+.postTitle a,.postTitle a:link,.postTitle a:visited{color:#999966;font-size:12pt}
+div,select,input{font-size:10.5pt;word-wrap:break-word;}
+div.block {
+  background-position: top left;
+  background-repeat: repeat-y;
+  font-size: 10.5pt;
+  text-align: justify;
+}
+
+div.block_footer {
+  background-position: top left;
+  background-repeat: no-repeat;
+  height: 67px;
+}
+
+div.post {
+  padding-left: 0px;
+}
+.dateTitle{padding-left:0px;font-size:10.5pt;color:#454545;line-height:150%;font-weight:bold}
+div.posttitle {
+  color: #73AF1D;
+    font-family: "nsimsun";
+    font-size: 12pt;
+    font-weight: bold;
+}
+div.postText{line-height:150%;}
+.posttitle a:visited, .posttitle a:active, .posttitle a:link {  
+    color:#999966;
+    text-decoration : none;
+    padding:2px;
+}
+
+.posttitle a:hover {
+    color: #999966;
+    text-decoration : none;padding:3px;
+    border-bottom:1px dotted #999966;
+}
+.postFoot{line-height:120%;border-bottom:1px dotted #808080;font-size:10.5pt;}
+div.itemdesc {
+  color: #808080;
+  font-size: 10.5pt;
+    text-transform: uppercase;
+}
+
+div.seperator {
+  
+  background-position: top left;
+  background-repeat: no-repeat;
+  margin: 15px 0px 10px 0px;
+}
+
+div.entrylistitem {
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+a.entrylisttitle, a.entrylisttitle:visited, a.entrylisttitle:link, a.entrylisttitle:active {
+  color: #FF6600;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+div.moreinfo {
+  font-size: 10.5pt;
+  text-align: justify;
+}
+
+div.moreinfotitle {
+    color: #FF2a00;
+    font-size: 10.5pt;
+    font-weight: bold;
+}
+
+div.comments {
+  font-size: 10.5pt
+}
+
+div.comment {
+    background-color: #FBFBFB;font-size:10.5pt;
+  border: 0px dotted #DDDDDD;
+  margin: 10px 0px 10px 0px;
+  padding: 10px;
+}
+
+div.comment_author {
+  margin: 5px 0px 5px 0px;font-size:10.5pt;
+}
+
+div.comment_content {
+  margin: 5px 0px 5px 0px;font-size:10.5pt;
+}
+
+#postcomment {
+    border: 0px solid #DDDDDD;
+  font-size: 10.5pt;
+  padding: 10px;
+  text-align: justify;
+  margin-top: 15px;
+  width: 435px;
+}
+
+#postcomment div {
+    color: #808080;
+  font-size: 10.5pt;
+    font-weight: bold;
+  margin: 5px 0px 5px 0px;
+}
+
+#postcomment input.text, textarea {
+  border: 1px solid #DDDDDD;
+  font-size: 10.5pt;
+}
+
+input.text {
+    width : 300px;  
+}
+
+textarea {
+    width : 300px;
+    height : 200px;  
+}
+
+#relatedlinks ul {
+    list-style : none;
+    margin-left : 10px;
+    padding : 0px;
+}
+
+span.highlight
+{
+    background-color:Yellow;      
+}
+.block_title{font-size:12pt;font-weight:bold}
+.code{float:left;width:80%;padding:10px;border:1px dotted #d9d9d9;background:#f4f4f4;}
+.postFoot{clear:both;padding-top:6px}
+br{clear:both;}

@@ -1,0 +1,477 @@
+﻿<lang>
+	<blogwind>
+		<zh_cn>博客风</zh_cn>
+		<en>Blogwind</en>
+		<de>Blogwind</de>
+		<jp>Blogwind</jp>
+	</blogwind>
+	<switch_lang>
+		<zh_cn>切换语言</zh_cn>
+		<en>Languages</en>
+		<de>Languages</de>
+		<jp>切换语言</jp>
+	</switch_lang>
+	<img>
+		<zh_cn></zh_cn>
+		<en>en/</en>
+		<de></de>
+		<jp></jp>
+	</img>
+	<tinymce>
+		<zh_cn>zh_cn_utf8</zh_cn>
+		<en>en</en>
+		<de>en</de>
+		<jp>zh_cn_utf8</jp>
+	</tinymce>
+	<help>
+		<zh_cn>查看网站帮助</zh_cn>
+		<en>Help</en>
+		<de>Hilfe</de>
+		<jp>ヘルプ</jp>
+	</help>
+	<signin>
+		<zh_cn>登录</zh_cn>
+		<en>Sign In</en>
+		<de>Login</de>
+		<jp>Login</jp>
+	</signin>
+	<signup>
+		<zh_cn>申请</zh_cn>
+		<en>Sign Up</en>
+		<de>Hilfe</de>
+		<jp>ヘルプ</jp>
+	</signup>
+	<forget_pwd>
+		<zh_cn>忘记密码</zh_cn>
+		<en>Forget Password</en>
+		<de>Forget Password</de>
+		<jp>Forget Password</jp>
+	</forget_pwd>
+	<username>
+		<zh_cn>用户名</zh_cn>
+		<en>Username</en>
+		<de>Username</de>
+		<jp>Username</jp>
+	</username>
+	<pwd>
+		<zh_cn>密　码</zh_cn>
+		<en>Password</en>
+		<de>Password</de>
+		<jp>Password</jp>
+	</pwd>
+	<remember_me>
+		<zh_cn>记录我的登陆信息</zh_cn>
+		<en>Remember me</en>
+		<de>Remember me</de>
+		<jp>Remember me</jp>
+	</remember_me>
+	<randomblog>
+		<zh_cn>阅读随机网志</zh_cn>
+		<en>Random Blog</en>
+		<de>zufällige Blog</de>
+		<jp>無作為ブロッグ</jp>
+	</randomblog>
+	<compose>
+		<zh_cn>编写网志</zh_cn>
+		<en>Compose</en>
+		<de>Eintrag hinzufügen</de>
+		<jp>エントリーを掲示する</jp>
+	</compose>
+	<logout>
+		<zh_cn>退出登陆</zh_cn>
+		<en>Logout</en>
+		<de>Abmelden</de>
+		<jp>ログオフ</jp>
+	</logout>
+	<stats_blogger>
+		<zh_cn>博客总数</zh_cn>
+		<en>Bloggers</en>
+		<de>Blogers gesamt</de>
+		<jp>総ウェブログを作る人</jp>
+	</stats_blogger>
+	<stats_entry>
+		<zh_cn>网志总数</zh_cn>
+		<en>Blogs</en>
+		<de>Einträge gesamt</de>
+		<jp>総エントリー</jp>
+	</stats_entry>
+	<stats_comment>
+		<zh_cn>评论总数</zh_cn>
+		<en>Comments</en>
+		<de>Kommentare gesamt</de>
+		<jp>総コメント</jp>
+	</stats_comment>
+	<stats_hits>
+		<zh_cn>累计访问</zh_cn>
+		<en>Pageviews</en>
+		<de>Seitenaufrufe gesamt</de>
+		<jp>総訪問</jp>
+	</stats_hits>
+	<myblog>
+		<zh_cn>我的网志</zh_cn>
+		<en>My blog</en>
+		<de>My blog</de>
+		<jp>My blog</jp>
+	</myblog>
+	<add_link>
+		<zh_cn>添加链接</zh_cn>
+		<en>New link</en>
+		<de>Link hinzufügen</de>
+		<jp>リンクを加える</jp>
+	</add_link>
+	<add_friend>
+		<zh_cn>添加朋友</zh_cn>
+		<en>Add a friend</en>
+		<de>Freund hinzufügen</de>
+		<jp>友人を加える</jp>
+	</add_friend>
+	<del_friend>
+		<zh_cn>删除此朋友</zh_cn>
+		<en>Delete this friend</en>
+		<de>Freund löschen</de>
+		<jp>友人を削除する</jp>
+	</del_friend>
+	<home_hint>
+		<zh_cn>在朋友列表中，点左键打开朋友网志，点右键查看朋友圈</zh_cn>
+		<en> Left click above list to open friend's blog, right click to view friend's friend circle.</en>
+		<de>In der Freundliste, linksklicken des blog eines Freunds zu öffnen, und rechtsklicken Freundkreis eines Freunds zu sehen.</de>
+		<jp>友人リストの中では、左クリックして、友人のブロッグを開来ます、右クリックして、友人会の円をチェックします。</jp>
+	</home_hint>
+	<my_links>
+		<zh_cn>我的链接</zh_cn>
+		<en>My links</en>
+		<de>Meine Links</de>
+		<jp>私のリンク</jp>
+	</my_links>
+	<my_friends>
+		<zh_cn>我的好友</zh_cn>
+		<en>My friends</en>
+		<de>Meine Freunden</de>
+		<jp>私の友人</jp>
+	</my_friends>
+	<prev>
+		<zh_cn>上一页</zh_cn>
+		<en>Prev</en>
+		<de>Zurück</de>
+		<jp>前のページ</jp>
+	</prev>
+	<next>
+		<zh_cn>下一页</zh_cn>
+		<en>Next</en>
+		<de>Weiter</de>
+		<jp>次のページ</jp>
+	</next>
+	<wrote>
+		<zh_cn>写了</zh_cn>
+		<en>wrote</en>
+		<de>schrieb</de>
+		<jp>書いた</jp>
+	</wrote>
+	<comment>
+		<zh_cn>评论</zh_cn>
+		<en>Comment</en>
+		<de>Kommentar</de>
+		<jp>評論</jp>
+	</comment>
+	<reply>
+		<zh_cn>回复</zh_cn>
+		<en>commented</en>
+		<de>kommentiert</de>
+		<jp>論評した</jp>
+	</reply>
+	<bookmarked>
+		<zh_cn>摘录了</zh_cn>
+		<en>bookmarked</en>
+		<de>ein Lesezeichen setzte bei</de>
+		<jp>ブックマークを追加した</jp>
+	</bookmarked>
+	<url>
+		<zh_cn>网址</zh_cn>
+		<en>URL</en>
+		<de>URL</de>
+		<jp>URL</jp>
+	</url>
+	<public>
+		<zh_cn>公开</zh_cn>
+		<en>Public</en>
+		<de>öffentlich</de>
+		<jp>公にする</jp>
+	</public>
+	<save>
+		<zh_cn>保存</zh_cn>
+		<en>Save</en>
+		<de>Speichern</de>
+		<jp>保存</jp>
+	</save>
+	<cancel>
+		<zh_cn>取消</zh_cn>
+		<en>Cancel</en>
+		<de>Abbrechen</de>
+		<jp>取消する</jp>
+	</cancel>
+					
+	<submit>
+		<zh_cn>提交</zh_cn>
+		<en>Submit</en>
+		<de>Veröffentlichen</de>
+		<jp>提出する</jp>
+	</submit>
+	<friend_id>
+		<zh_cn>您的朋友在博客风中的ID</zh_cn>
+		<en>Your friend's ID in Blogwind</en>
+		<de>ID Ihres Freunds in Blogwind</de>
+		<jp>Blogwindの中で、あなたの友人のID</jp>
+	</friend_id>
+	<navigation>
+		<zh_cn>导航</zh_cn>
+		<en>Navigation</en>
+		<de>Navigation</de>
+		<jp>ナビゲーション</jp>
+	</navigation>
+	<homepage>
+		<zh_cn>首页</zh_cn>
+		<en>Homepage</en>
+		<de>Startseite</de>
+		<jp>ホームページ</jp>
+	</homepage>
+	<tagline>
+		<zh_cn>网志介绍</zh_cn>
+		<en>Tagline</en>
+		<de>Blog-Slogan</de>
+		<jp>ウェブログの紹介</jp>
+	</tagline>
+	<categories>
+		<zh_cn>网志分类</zh_cn>
+		<en>Categories</en>
+		<de>Kategorien</de>
+		<jp>ウェブログの分類</jp>
+	</categories>
+	<links>
+		<zh_cn>个人链接</zh_cn>
+		<en>My Links</en>
+		<de>Meine Links</de>
+		<jp>私のリンク</jp>
+	</links>
+	<archive>
+		<zh_cn>网志存档</zh_cn>
+		<en>Archive</en>
+		<de>Archive</de>
+		<jp>アーカイブ</jp>
+	</archive>
+	<total_visits>
+		<zh_cn>累计浏览</zh_cn>
+		<en>Total visits</en>
+		<de>Seitenaufrufe gesamt</de>
+		<jp>総訪問</jp>
+	</total_visits>
+	<view_blog_in_category>
+		<zh_cn>查看本分类的所有网志</zh_cn>
+		<en>View blogs in this category</en>
+		<de>Alle blogs in dieser Kategorie</de>
+		<jp>この分類にすべてのウェブログ</jp>
+	</view_blog_in_category>
+	<edit_post>
+		<zh_cn>修改此网志</zh_cn>
+		<en>Edit this post</en>
+		<de>Diese Blogeintrag bearbeiten</de>
+		<jp>このポストを編集する</jp>
+	</edit_post>
+	<tag>
+		<zh_cn>标签</zh_cn>
+		<en>Tag</en>
+		<de>Tag</de>
+		<jp>タグ</jp>
+	</tag>
+	<said>
+		<zh_cn>说</zh_cn>
+		<en>said</en>
+		<de>sagte</de>
+		<jp>言った</jp>
+	</said>
+	<name>
+		<zh_cn>名字</zh_cn>
+		<en>Name</en>
+		<de>Name</de>
+		<jp>名前</jp>
+	</name>
+	<comment_url>
+		<zh_cn>主页</zh_cn>
+		<en>URL</en>
+		<de>URL</de>
+		<jp>URL</jp>
+	</comment_url>
+	<comment_content>
+		<zh_cn>内容</zh_cn>
+		<en>Comment</en>
+		<de>Comment</de>
+		<jp>コメント</jp>
+	</comment_content>
+	<pls_leave_comment>
+		<zh_cn>请发表评论</zh_cn>
+		<en>Please leave your comment here</en>
+		<de>Kommentar veröffentlichen hier.</de>
+		<jp>評論を発表して下さい</jp>
+	</pls_leave_comment>
+	<na>
+		<zh_cn>无</zh_cn>
+		<en>NA</en>
+		<de>nichts</de>
+		<jp>ない</jp>
+	</na>
+	<profile>
+		<zh_cn>个人资料</zh_cn>
+		<en>Profile</en>
+		<de>Profilinformationen</de>
+		<jp>個人の資料</jp>
+	</profile>
+	<manage>
+		<zh_cn>网志管理</zh_cn>
+		<en>Admins</en>
+		<de>Verwalten</de>
+		<jp>Blog管理</jp>
+	</manage>
+	<manage_category>
+		<zh_cn>分类管理</zh_cn>
+		<en>Categories</en>
+		<de>Kategorien verwalten</de>
+		<jp>分類を管理する</jp>
+	</manage_category>
+	<manage_post>
+		<zh_cn>网志管理</zh_cn>
+		<en>Blogs</en>
+		<de>Einträge verwalten</de>
+		<jp>ポストを管理する</jp>
+	</manage_post>
+	<template>
+		<zh_cn>选择模板</zh_cn>
+		<en>Templates</en>
+		<de>Designs</de>
+		<jp>テンプレート</jp>
+	</template>
+	<manage_links>
+		<zh_cn>链接管理</zh_cn>
+		<en>Links</en>
+		<de>Links verwalten</de>
+		<jp>リンクの管理する</jp>
+	</manage_links>
+	<back_to_main>
+		<zh_cn>返回首页</zh_cn>
+		<en>Home</en>
+		<de>Blogwind Startseite</de>
+		<jp>Blogwindに戻る</jp>
+	</back_to_main>
+	<back_to_blog>
+		<zh_cn>返回网志</zh_cn>
+		<en>MyBlog</en>
+		<de>Blog Startseite</de>
+		<jp>ウェブログに戻る</jp>
+	</back_to_blog>
+	<logoff>
+		<zh_cn>退出登陆</zh_cn>
+		<en>Logout</en>
+		<de>Abmelden</de>
+		<jp>ログオフ</jp>
+	</logoff>
+	<title>
+		<zh_cn>标题</zh_cn>
+		<en>Title</en>
+		<de>Title</de>
+		<jp>标题</jp>
+	</title>
+	<category>
+		<zh_cn>分类</zh_cn>
+		<en>Category</en>
+		<de>Kategorien</de>
+		<jp>分類</jp>
+	</category>
+	<tag_delimiter>
+		<zh_cn>多个标签请用逗号分开，不知道什么是标签</zh_cn>
+		<en>Multiple tags seperated by commas. What's a tag</en>
+		<de>Mehrfache Tag trennten sich durch Kommas. Was ist ein Tag</de>
+		<jp>複数のタグがコンマで分離ます。タグは何ですか</jp>
+	</tag_delimiter>
+	<upload_img>
+		<zh_cn>上传图片</zh_cn>
+		<en>Upload Pic</en>
+		<de>Bilder hochladen</de>
+		<jp>ップロードする</jp>
+	</upload_img>
+	<list_upload_img>
+		<zh_cn>本次上传图片</zh_cn>
+		<en>Current Uploaded Pic</en>
+		<de>Current Uploaded Pic</de>
+		<jp>本次上传图片</jp>
+	</list_upload_img>
+	<close_write_hint>
+		<zh_cn>提示：如果您选择“确定”，您将离开本页面，并且您现在所编辑的网志将不会被保存哦！</zh_cn>
+		<en>Notes: Click "OK" to confirm leaving current page, as your unsaved blog will be lost~</en>
+		<de>Notes: Click "OK" to confirm leaving current page, as your unsaved blog will be lost~</de>
+		<jp>提示：如果您选择“确定”，您将离开本页面，并且您现在所编辑的网志将不会被保存哦！</jp>
+	</close_write_hint>
+	<upload_img_hint>
+		<zh_cn>请使用下方文件框选择jpg格式文件上传</zh_cn>
+		<en>Use file upload box below to upload jpg pic</en>
+		<de>Use file upload box below to upload jpg pic</de>
+		<jp>请使用下方文件框选择jpg格式文件上传</jp>
+	</upload_img_hint>
+	<qq>
+		<zh_cn>QQ表情</zh_cn>
+		<en>Cute Emot</en>
+		<de>QQ emoticons</de>
+		<jp>QQ表情</jp>
+	</qq>
+	<flag>
+		<zh_cn>小旗帜</zh_cn>
+		<en>Little flags</en>
+		<de>kleine Flaggen</de>
+		<jp>小さい旗幟</jp>
+	</flag>
+	<bun>
+		<zh_cn>小包子</zh_cn>
+		<en>Little buns</en>
+		<de>kleine Brötchen</de>
+		<jp>小さいまんじゅう</jp>
+	</bun>
+	<pix>
+		<zh_cn>小图片</zh_cn>
+		<en>Small pix</en>
+		<de>kleine Bilder</de>
+		<jp>小さいピクチャー</jp>
+	</pix>
+	<cat>
+		<zh_cn>可爱猫咪</zh_cn>
+		<en>Cutie Kittie</en>
+		<de>nettes Kätzchen</de>
+		<jp>かわいい猫</jp>
+	</cat>
+	<rss>
+		<zh_cn>RSS导入</zh_cn>
+		<en>Import RSS</en>
+		<de>RSS importieren</de>
+		<jp>輸入RSS</jp>
+	</rss>
+	<publish>
+		<zh_cn>发表</zh_cn>
+		<en>Publish</en>
+		<de>Veröffentlichen</de>
+		<jp>発表</jp>
+	</publish>
+	<clipboard>
+		<zh_cn>提交前将网志备份在剪贴版</zh_cn>
+		<en>Copy blog to clipboard before submit automatically.</en>
+		<de>提交前将网志备份在剪贴版</de>
+		<jp>提交前将网志备份在剪贴版</jp>
+	</clipboard>
+	<contact>
+		<zh_cn>联系</zh_cn>
+		<en>Contact</en>
+		<de>Kontakt</de>
+		<jp>連絡する</jp>
+	</contact>
+	<add_as_friend>
+		<zh_cn>加为朋友</zh_cn>
+		<en>Add as friend</en>
+		<de>Als Freund hinzufügen</de>
+		<jp>友人として、加える</jp>
+	</add_as_friend>
+</lang>

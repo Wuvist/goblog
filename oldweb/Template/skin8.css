@@ -1,0 +1,72 @@
+.loginput
+{
+border: 1px solid #AAAAAA;
+WIDTH: 80px;
+}
+.logbutton
+{
+border: 1px solid #666666;
+background-color:  #999999;
+font-family:"Palatino Linotype",simsun,"宋体"; font-size: 9pt; line-height: 15px;
+}
+
+body, td, p {  
+font-size : 11pt; 
+font-family: "Palatino Linotype",simsun,"宋体";
+font-weight : normal; 
+font-style : normal; 
+text-decoration:none;
+}   
+.borrrder{
+border: 1pt solid #666666;
+}
+.small {  
+font-size : 12pt; 
+line-height: 1.0em;    
+}
+
+.sidetop {
+font-family:  "Palatino Linotype",simsun,"宋体";
+font-size: 14pt;
+color: #000000;
+border-bottom-width: 1pt;
+border-bottom-style: solid;
+border-bottom-color: #666666;
+text-align: center;
+}
+.side{
+color: #000000;
+font-family:"Palatino Linotype",simsun,"宋体";
+font-size:12pt;
+line-height: 16pt;
+text-align: center;
+}
+.datetimeheader {
+font-size: 14pt;font-family:"Palatino Linotype",simsun,"宋体";
+font-weight: bold;
+color: #000000;
+}
+.datetimefooter {
+font-family:"Palatino Linotype",simsun,"宋体";
+font-size: 12pt;
+color: #000000;
+}
+a:link {
+font-size:12pt;
+color: #999999;
+text-decoration: none;
+}
+a:visited {
+font-size:12pt;
+color: #999999;
+text-decoration: none;
+}
+a:active {
+font-size:12pt;
+color: #999999;
+}
+a:hover {
+font-size:12pt;
+color: #666666;
+text-decoration: none;
+}	

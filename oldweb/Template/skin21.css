@@ -1,0 +1,68 @@
+A:link
+{ text-decoration: none; color:C0CD94; cursor:crosshair; }
+A:visited
+{ text-decoration: none; color:C0CD94; cursor:crosshair; }
+A:active
+{ text-decoration: none; color:C0CD94; cursor:crosshair; }
+
+A.b:link
+{ text-decoration: none; color:9FAACD; cursor:crosshair; }
+A.b:visited
+{ text-decoration: none; color:9FAACD; cursor:crosshair; }
+A.b:active
+{ text-decoration: none; color:9FAACD; cursor:crosshair; }
+A.b:hover
+{ text-decoration: none; font-weight: bold; color:F8C329; }
+
+body 
+{ font-family: Tahoma;
+color: #7C88A3; 
+letter-spacing: 0.1pt;
+font-weight: normal; 
+font-size: 9pt;
+text-align:center;
+scrollbar-face-color: #FFFFFF;
+		 scrollbar-highlight-color: #D5DAE9;  
+		 scrollbar-3dlight-color: #FFFFFF;
+		 scrollbar-shadow-color: #D5DAE9;
+		 scrollbar-arrow-color: #D5DAE9;
+		 scrollbar-track-color: #FFFFFF;
+		 scrollbar-darkshadow-color: #FFFFFF;
+}
+td 
+{ 
+font-family: Tahoma;
+color: #7C88A3; 
+letter-spacing: 0.1pt;
+font-weight: normal; 
+font-size: 9pt;
+text-align:center;
+text-align:left;
+}
+
+.loginput
+{
+	border:thin #FFB87B 1px solid; 
+	WIDTH: 96px;
+}
+.logbutton
+{
+	border:thin #FFB87B 1px solid; 
+	background:#FFFFFF;
+	font-family:宋体; font-size: 12px; line-height: 15px;
+}
+
+.addcomment input{
+	border:thin #7C88A3 1px solid; 
+	background:#FFFFFF;
+	color: #7C88A3; 
+	WIDTH: 250px;
+}
+
+.addcomment textarea{
+	border:thin #7C88A3 1px solid; 
+	background:#FFFFFF;
+	color: #7C88A3; 
+	WIDTH: 250px;
+}
+

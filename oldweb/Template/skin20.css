@@ -1,0 +1,53 @@
+a:link       {  font-family: Arial; style; font-size: 14px; color: #ffffcc; letter-spacing:0px;text-decoration:underline}
+a:visited       {  font-family: Arial; style; font-size: 14px; color: #ffffcc; letter-spacing:0px;text-decoration:underline}
+a:hover     {  font-family: Arial; style; font-size: 14px; color: #ffff00; letter-spacing:0px; text-decoration:underline}
+a.s:link       {  font-family: Arial; style; font-size: 14px; color: #ffffcc; letter-spacing:0px;text-decoration:none}
+a.s:visited       {  font-family: Arial; style; font-size: 14px; color: #ffffcc; letter-spacing:0px;text-decoration:none}
+a.s:hover     {  font-family: Arial; style; font-size: 14px; color: #ffff00; letter-spacing:0px;text-decoration:none}
+.loginput {
+
+	WIDTH: 100px;
+}
+
+body         {  
+	font-family: Arial; 
+	style; font-size: 14px; 
+	color: #ffffcc; 
+	letter-spacing:0px;
+	background:url("../Images/skins/skin20/1.jpg") #1b1b1b no-repeat fixed bottom right;
+	scrollbar-base-color:#1b1b1b;
+	scrollbar-arrow-color:#ffffcc;
+}
+
+table        {  font-family: Arial; style; font-size: 14px; color: #ffffcc; letter-spacing:0px}
+td           {  font-family: Arial; style; font-size: 14px; color: #ffffcc; letter-spacing:0px}
+
+input{
+	border:thin #ffffcc 1px solid; 
+	background:#1b1b1b;
+	color: #ffffcc; 
+}
+
+textarea{
+	border:thin #ffffcc 1px solid; 
+	background:#1b1b1b;
+	color: #ffffcc; 
+}
+
+hr{
+	height:1px;
+    color: #ffffcc;
+    background-color: #ffffcc;
+    border: none;
+}
+
+.comments hr{
+	height:1px;
+    color: #ffffcc;
+    background-color: #ffffcc;
+    border: none;
+}
+.starry
+{
+position:absolute; left:0px; top:0px; width:1000px; height:110px; z-index:-1; visibility: show;
+}

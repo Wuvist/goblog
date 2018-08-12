@@ -1,0 +1,108 @@
+.logbutton
+{
+border: 1px solid #000000;background-color: #c0c0c0;
+font-family:宋体; font-size: 12px; line-height: 15px;font-color:#A0A0A0;
+}
+
+.loginput
+{
+BORDER: #A0A0A0 1px solid;
+WIDTH: 120px;
+}
+.log
+{
+font-family: 宋体;
+font-size:12px;
+text-align:left;
+line-height: 14px;
+}
+
+.tab
+{
+font-family: 宋体;
+font-size:14px;
+text-align:left;
+line-height: 14px;
+color:#A0A0A0;
+}
+
+.DateHeader
+{
+font-family: 宋体;
+text-align:left;
+line-height: 16pt;
+font-weight: bold; 
+font-size : 11px; 
+color : #A9C8DF;
+
+}
+
+.PostFooter
+{
+font-family: georgia, Verdana, Arial, Helvetica, sans-serif,宋体;
+font-size:10px;
+text-align: right;
+}
+
+body {
+scrollbar-face-color: #ffffff;
+scrollbar-shadow-color: #000000;  
+scrollbar-highlight-color: #000000;
+scrollbar-3dlight-color: #000000;
+scrollbar-darkshadow-color: #000000;
+scrollbar-track-color: #E5E4E4;
+scrollbar-arrow-color: #000000;  
+}
+
+A:link{color:#c0c0c0;text-decoration:none;cursor:hand}
+A:visited{color:#c0c0c0;text-decoration:none;cursor:hand}
+A:active{color:#c0c0c0;text-decoration:none;cursor:hand}
+A:hover{color:#AA0000;text-decoration:underline;cursor:hand}
+
+
+#me {position:absolute; left:103;top:413; z-Index:0}
+#blog {position:absolute; left:330;top:129; z-Index:1}
+
+.head {
+font-size: 12pt; 
+text-decoration:bold;
+color: #000000; 
+}
+
+.blog {
+color: #000000;
+font-size: 10pt;
+font-family: georgia, Verdana, Arial, Helvetica, sans-serif;
+border: medium none #000000;
+text-align: justify;
+border-right: 1px solid #EDE9E0;
+border-bottom: 1px solid #EDE9E0;
+overflow: auto;
+padding: 10px;
+margin: 0px;
+height: 100%; 
+z-index:5
+}
+
+textarea, input, select {
+font-family : 宋体,verdana, arial; 
+border-color: #c0c0c0;   
+border-style: solid; 
+border-top-width: 1px; 
+border-left-width: 1px;
+border-right-width: 1px; 
+border-bottom-width: 1px; 
+} 
+
+
+.header {
+color: #000000;
+font-size: 30pt;
+font-family: georgia, Arial, Helvetica, sans-serif;
+font: bold;
+border: medium none #000000;
+line-height: 120%;
+text-align: justify;
+padding-left: 20px;
+padding-right: 20px
+}

@@ -1,0 +1,28 @@
+https://passport.baidu.com/?login
+
+POST /?login HTTP/1.1
+Host: passport.baidu.com
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.2; zh-CN; rv:1.9) Gecko/2008052906 Firefox/3.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-cn,zh;q=0.5
+Accept-Charset: gb2312,utf-8;q=0.7,*;q=0.7
+Keep-Alive: 300
+Connection: close
+Referer: http://passport.baidu.com/?login
+Cookie: BAIDUID=7B2646E927490610FAFA9F8D315D12C4:FG=1; BDSTAT=e763db496993019e84661867f6ff113895c0fb25b199a90158086e061e953367; BDSP=509626a408fa513dec0b52ed3d6d55fbb2fb43169cd5764aaa54542209f790529822720e0cf3d7ca7bcb0a46f21fbe096b63f6246b600c338744ebf81a4c510fd9f9d72a6059252dd42a2834349b033b5bb5c9ea15ce36d3d539b6003af33a87eb50f8a7; BDTIP=1215783899; BDUSE=deleted
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 177
+tpl_ok=&next_target=&tpl=&skip_ok=&aid=&need_pay=&need_coin=&pay_method=&u=.%2F&return_method=get&more_param=&return_type=&psp_tt=0&username=wuvist&password=ne0120ko&mem_pass=on
+
+HTTP/1.x 200 OK
+Date: Tue, 22 Jul 2008 18:39:40 GMT
+Server: apache(passport) 1.0.3.0
+Set-Cookie: PASSPORTRETRYSTRING=deleted; expires=Mon, 01 Jan 1970 00:00:00 GMT; path=/; domain=.baidu.com
+Set-Cookie: BDUSS=FNsdGxhQXEya1kzWldHN2diWDZmMGlUUWhzSTdQRX4wdy1KY0NBd3R-SnN0cTFJQVFBQUFBJCQAAAAAAAAAAAEAAADx9zkAV3V2aXN0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGwphkhsKYZIM; expires=Tue, 01 Jan 2030 00:00:00 GMT; path=/; domain=.baidu.com
+P3P: CP=" OTI DSP COR IVA OUR IND COM "
+Content-Type: text/html;charset=gbk
+Cache-Control: no-cache
+Pragma: no-cache
+Content-Encoding: none
+Connection: close
+Transfer-Encoding: chunked

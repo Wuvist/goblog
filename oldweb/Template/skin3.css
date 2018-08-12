@@ -1,0 +1,88 @@
+body
+{ background:#FDFFFC;
+}
+body, td, p{
+font-size : 10.5pt; 
+font-family : "Palatino Linotype",simsun,Palatino, serif,"宋体"; 
+color : #000000;
+scrollbar-face-color: #FDFFFC;
+scrollbar-shadow-color: #303030;  
+scrollbar-highlight-color: #303030;
+scrollbar-3dlight-color: #FDFFFC;
+scrollbar-darkshadow-color: #FDFFFC;
+scrollbar-track-color: #FDFFFC;
+scrollbar-arrow-color: #303030;  
+cursor: crosshair;
+}
+.sidee {  
+color: #999999;
+border: solid 1px #666666;
+font-size : 10.5pt; 
+font-family : "Palatino Linotype",simsun,Palatino, serif,"宋体";
+line-height: 12pt; 
+padding: 4px;
+}
+.maintop {  
+color: #999999;
+font-size : 16pt; 
+font-family : "Palatino Linotype",simsun,Palatino, serif,"宋体";
+line-height: 1.3em;  
+border: solid 1px #666666;
+}
+.borderrr{ 
+border: solid 1px #3C3C3C;
+}
+.toplinkss{  
+font-size : 10.5pt
+font-family : "Palatino Linotype",simsun,Palatino, serif,"宋体";
+line-height: 1.3em;  
+border: solid 1px #666666;
+}
+.blog {
+overflow: auto;
+padding: 10px;
+margin: 0px;
+height: 350px; 
+}
+a:link {  
+cursor: crosshair;
+color: blue;
+font-size : 10.5pt; 
+font-family : "Palatino Linotype",simsun,Palatino, serif,"宋体";
+text-decoration:none;
+line-height: 1.3em;
+}      
+A:hover{ font-family:"Palatino Linotype",simsun,Palatino, serif,"宋体"; font-size: 10.5pt; color:red;text-decoration: line-through; font-weight: none; cursor: hand; }
+A:visited
+{ text-decoration: none; 
+color:blue; }
+
+.head {  font-size: 12pt; 
+color: #3C3C3C; 
+border: #999999; 
+border-style: ridge; border-top-width: 1px; 
+border-right-width: 1px; border-bottom-width: 2px; 
+border-left-width: 1px; text-align: center;
+}
+.bg {
+background: #FDFFFC;
+}
+
+.logbutton
+{
+border: 1px solid #AAAAAA;background-color: #FFFFFF;
+font-family:宋体; font-size: 9pt; line-height: 15px;
+}
+
+.loginput
+{
+BORDER: #AAAAAA 1px solid;
+WIDTH: 96px;
+}
+.log
+{
+font-family: 宋体;
+font-size:12px;
+text-align:left;
+line-height: 14px;
+}

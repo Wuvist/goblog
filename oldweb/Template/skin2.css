@@ -1,0 +1,132 @@
+A:link
+{ text-decoration: none; 
+color:orange; }
+A:visited
+{ text-decoration: none; 
+color:orange; }
+A:active
+{ text-decoration: none; 
+color:orange; }
+A:hover
+{ text-decoration: none; 
+color:#FFFFFF;
+background-color: #999999;
+cursor: sw-resize; }
+.hlbg
+{ 
+color:"piggy";
+background-color: #330000;
+
+}
+body
+{ font-family: "Palatino Linotype",simsun,Palatino, serif,"宋体";; 
+color: #000033 ; 
+font-weight: normal; 
+font-size: 9pt; 
+direction: ltr; 
+cursor: text;
+scrollbar-face-color : #440000; 
+scrollbar-highlight-color : #000000; 
+scrollbar-3dlight-color : #000000; 
+scrollbar-shadow-color : #000000; 
+scrollbar-darkshadow-color : #000000;
+scrollbar-track-color : #000000; 
+scrollbar-arrow-color : orange; }
+
+td
+{ font-family: arial; 
+color: #0099CC;
+padding: 0; 
+font-size: 10.5pt;
+font-weight: bolder;
+border: 0;}
+
+input, textarea
+{ font-family: "Palatino Linotype",simsun,Palatino, serif,"宋体";; 
+font-size: 12px;
+font-weight: normal;
+color: grey;  }
+
+.logbutton
+{
+border: 1px solid #AAAAAA;
+background-color: orange;
+font-family:宋体; font-size: 9pt; line-height: 15px;
+}
+
+.loginput
+{
+BORDER-RIGHT: #8080ff 1px solid;
+BORDER-TOP: #8080ff 1px solid;
+BORDER-LEFT: #8080ff 1px solid;
+BORDER-BOTTOM: #8080ff 1px solid
+WIDTH: 10px;
+}
+
+.maindiv
+{ position:absolute; 
+top:0; 
+left:0; 
+width:970; 
+height:570; 
+z-index:2; 
+padding:1 
+border: 2px groove #0099CC; 
+font-family: "Palatino Linotype",simsun,Palatino, serif,"宋体";
+color: #000033 ; 
+font-weight: normal; 
+font-size: 10.5pt; }
+
+.headerdiv
+{ position:absolute; 
+top:20; 
+left:381; 
+width:550; 
+height:50; 
+z-index:2; 
+padding:1; 
+border-bottom: 1px solid #660000; 
+border-left: 1px dashed #660000;
+border-right: 2px solid #660000;
+border-top: 1px solid #660000;
+font-family: "Palatino Linotype",simsun,Palatino, serif,"宋体";; 
+color: #999999; 
+font-weight: bold; 
+font-size: 12pt;
+valign: bottom;
+align: center; }
+
+.blogdiv
+{ position:absolute; 
+overflow: auto;
+top:70; 
+left:381; 
+width:350; 
+height:466; 
+z-index:2; 
+padding:1; 
+border-top: 1px none #660000;
+border-left: 1px dashed #660000;
+border-right: 1px solid #660000;
+border-bottom: 1px solid #660000; 
+font-family: "Palatino Linotype",simsun,Palatino, serif,"宋体"; 
+color: #999999 ; 
+font-weight: normal; 
+font-size: 10.5pt; }
+
+.sidediv
+{ position:absolute; 
+overflow: auto;
+top:70; 
+left:730; 
+width:200; 
+height:466; 
+z-index:2; 
+padding:1; 
+border-left: 1px dashed #660000;
+border-bottom: 1px solid #660000;
+border-right: 1px solid #660000;
+font-family: "Palatino Linotype",simsun,Palatino, serif,"宋体";; 
+color: #999999 ; 
+font-weight: normal; 
+font-size: 10.5pt; }

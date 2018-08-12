@@ -1,0 +1,90 @@
+body,table,p,div,span {
+	font:normal 12px arial;
+}
+a:link {
+	color: navy; text-decoration: underline
+}
+a:visited {
+	color: navy; text-decoration: underline
+}
+a:active {
+	color: navy; text-decoration: underline
+}
+a:hover {
+	color: #0000cc; text-decoration: none
+}
+body {margin:5px 0 0 0;padding:0;}
+hr { color: dimgrey; height:1px; text-align:left}
+
+h1 { font:bold 17px verdana; margin-bottom:10px; color: #003399;}
+#footer { clear: both;	padding: 1em;	text-align: center;	border-top:solid 2px #ECECF6; width:850; }	
+.tab-inactive
+{
+	background-color: #014E82; 
+	display:inline; 
+	padding-right: 6px;
+	padding-left: 6px;
+	height:20;
+	font:11px verdana;
+	cursor:hand;	
+}
+.tab-active
+{
+	color: #000000;
+	border-top: 1px solid #c0c0c0;
+	border-right: 1px solid #c0c0c0;
+	border-left: 1px solid #c0c0c0;
+	border-bottom: 0px none #c0c0c0;
+	background-color: #efefef;
+	text-align: center;
+	display:inline;	
+	font:11px verdana;
+	padding-right: 6px;
+	padding-left: 6px;
+}
+ 
+/*----Example CSS Class --*/ 
+img.greyborder {
+	border: 1px solid #c0c0c0;
+}
+img.invert {
+	filter: invert;
+}
+img.flip{
+	filter: fliph 
+}
+td.module {
+	background-color: #efefef;
+}
+td.content {
+	color: black; 
+	font-family: tahoma, arial, helvetica; 
+	font-weight: bold; 
+}
+/* hyperlink styles of the unselected tabs */
+a.othertabs:link, a.othertabs:visited, a.othertabs:active {
+	text-decoration: none;
+	color:#ffffff;
+}
+a.othertabs:hover {
+	text-decoration: underline;
+	color:#ffff00;
+}
+.subtabbg {
+	background-color: #efefef;
+}
+.redcolor{
+	color:red;
+}
+.boldgreen
+{
+	color: green; font-weight: bold;
+}
+.highlight
+{
+	background-color: yellow;
+}
+
+#leftcolumn ul, #rightcolumn ul {padding:0 0 4px 10px;list-style-position: outside; margin: 0; margin-bottom: 5px; list-style: none;}
+#leftcolumn li, #rightcolumn li {padding-bottom:2px;}
+.leftcolumntitle {padding:0 0 4px 10px;}

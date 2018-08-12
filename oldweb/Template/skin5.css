@@ -1,0 +1,100 @@
+body {
+margin: 0px;
+font-family: simsun,"宋体";
+}
+
+.logbutton
+{
+border: 1px solid #f0e0b1;background-color: #FFFFFF;
+font-family:simsun,"宋体"; font-size: 12px; line-height: 15px;
+}
+
+.loginput
+{
+BORDER: #F0e0b1 1px solid;
+WIDTH: 90px;
+}
+.log
+{
+font-family: simsun,"宋体";
+font-size:9pt;
+text-align:left;
+line-height: 14px;
+}
+
+.title {
+color: #990000;
+font-family:simsun,"宋体";
+font-size:14pt;
+line-height: 17px;
+padding: 0px;
+text-align:left;
+}
+.name {
+color: #990000;
+font-family:simsun,"宋体";
+font-size:24px;
+line-height: 22px;
+padding: 30px;
+text-align:left;
+}
+.description {
+color: #e0e0b1;
+font-family:simsun,"宋体";
+font-size:10.5pt;
+line-height: 17px;
+padding: 10px;
+align: right;
+}
+.sidetop {
+font-family:  simsun,"宋体" bold;
+font-size: 12pt;
+color: #990000;
+border-bottom-width: 1px;
+border-bottom-style: solid;
+border-bottom-color: #000000;
+text-align: center;
+}
+.blog {
+margin-left:10px;
+margin-right: 10px;
+margin-top:10px;
+font-family:simsun,"宋体";
+font-size:10.5pt;
+line-height: 12pt;
+}
+.side{
+margin-right:5px;
+margin-left:5px;
+margin-top:10px;
+font-family:simsun,"宋体";
+font-size:10.5pt;
+line-height: 17px;
+text-align: center;
+}
+.datetimeheader {
+
+font-size: 14px;font-family:simsun,"宋体";
+font-weight: bold;
+color: #000000;
+}
+.datetimefooter {
+font-family:simsun,"宋体";
+font-size: 14px;
+color: #000000;
+}
+a:link {
+color: #990000;
+text-decoration: none;
+}
+a:visited {
+color: #990000;
+text-decoration: none;
+}
+a:active {
+color: #990000;
+}
+a:hover {
+color: #000000;
+text-decoration: none;
+}	

@@ -1,0 +1,21 @@
+2011-05-16 00:32:46,078 [1] INFO  Blogwind.Global - Started
+2011-05-16 00:32:46,266 [1] ERROR Blogwind.Global - Url:/system/login.aspx
+Date:2011-05-16 00:32
+Header: Accept=*%2f*&Accept-Encoding=deflate%2c+gzip&Host=blog.cctvcnm.com&User-Agent=Mozilla%2f5.0+(compatible%3b+SiteBot%2f0.1%3b+%2bhttp%3a%2f%2fwww.sitebot.org%2frobot%2f)&X-REWRITE-URL=%2fsystem%2f%252Flogin.aspx%253Fusername%253D&X-REWRITE-PROXY=http%3a%2f%2fwww.blogwind.com%3a8888%2fsystem%2f%252Flogin.aspx%253Fusername%253D&X-REWRITE-PROXY-SETTINGS=ConnectTimeout%3d60000%3bReceiveTimeout%3d30000%3bSendTimeout%3d30000%3bSuppressErrors%3d1%3b
+
+Get: username=x.rwhlp%3fp%3d0
+
+Post: 
+
+Error: System.Web.HttpException: The file '/system/login.aspx' does not exist.
+   at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   at System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+2011-05-16 13:04:56,656 [1] INFO  Blogwind.Global - Started

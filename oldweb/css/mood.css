@@ -1,0 +1,17 @@
+.frame1{border:1px solid #5da3fc;padding:2px;}
+.frame0{border:1px solid #addf53;padding:2px;}
+.frame2{border:1px solid #cc90d9;padding:2px;}
+body{ FONT-SIZE: 10.5pt; FONT-FAMILY: "Î¢ÈíÑÅºÚ",simsun,"ËÎÌå"; }
+.bg1{background-color:#5da3fc}
+.bg0{background-color:#addf53}
+.bg2{background-color:#cc90d9}
+.inline{display:inline}
+.txt {padding:3px;font-size:10.5pt}
+.left{float:left}
+.right{float:right}
+.time{font-size:9pt;color:grey}
+.innerbar{padding: 3px 0px 0px 2px; color:#333333; font-weight:bold;font-size:9pt;}
+.bartitle{font-size:9pt;padding:4px;color:#fff}
+.mood{COLOR: #3e62db}
+#white { overflow:hidden;LINE-HEIGHT: 160%;padding:5px }
+#grey { overflow:hidden;BACKGROUND: #e5e5e5; LINE-HEIGHT: 160%;padding:5px}

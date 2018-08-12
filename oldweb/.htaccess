@@ -1,0 +1,27 @@
+# Helicon ISAPI_Rewrite configuration file
+# Version 3.0.0.27
+
+RewriteEngine On
+RewriteCompatibility2 On
+RepeatLimit 200
+RewriteBase 
+# unsupported directive: [ISAPI_Rewrite]
+
+#  Defend your computer from some worm attacks
+#  RewriteRule .*(?:global.asa|default\.ida|root\.exe|\.\.).* . [F,I,O]
+
+# RewriteProxy (.*) http\://blogwind\.com/t.aspx\?$1$2 [I]
+RewriteRule ^\/(\w*)\/(\d*)\.shtml$ \/Template\/user_comment.aspx\?blogger=$1&Article_id=$2 [NC,U]
+RewriteRule ^\/(\w*)\/comment.aspx\?Article_id=(\d*)$ \/Template\/user_comment.aspx\?blogger=$1&Article_id=$2 [NC,U]
+RewriteRule ^\/$ \/default.aspx [NC,U]
+RewriteRule ^\/system\/default\.aspx$ \/system\/default\.aspx? [NC,U]
+RewriteRule ^\/(\w*)\/default\.aspx$ \/Template\/user_default.aspx\?blogger=$1 [NC,U]
+RewriteRule ^\/(\w*)\/default\.aspx\?page=(\d*)$ \/Template\/user_default.aspx\?blogger=$1&page=$2 [NC,U]
+RewriteRule ^\/(\w*)\/$ \/Template\/user_default.aspx\?blogger=$1 [NC,U]
+RewriteRule ^/(?!images|users|CuteSoft_Client|aspnet_client|Images|wap)(.*)\.((?:gif|png|jpg|jpeg|JPG|GIF|JPEG|bmp|BMP))$ \/images\/old\/$1.$2 [NC,U]
+RewriteRule ^\/(\w*)$ \/Template\/user_default.aspx\?blogger=$1 [NC,U]
+RewriteRule ^\/(\w*)\/cate(\d*)\.shtml$ \/Template\/user_cate.aspx\?blogger=$1&cate_id=$2 [NC,U]
+RewriteRule ^\/(\w*)\/(\d*)\/(\d*)\/$ \/Template\/user_cate.aspx\?blogger=$1&y=$2&m=$3 [NC,U]
+RewriteRule ^\/(\w*)\/(\d*)\/(\d*)$ \/Template\/user_cate.aspx\?blogger=$1&y=$2&m=$3 [NC,U]
+RewriteRule ^\/(\w*)\/UserCate\.aspx\?cate_id=(\d*)$ \/Template\/user_cate.aspx\?blogger=$1&cate_id=$2 [NC,U]
+RewriteRule ^\/(\w*)\/UserCate\.aspx\?y=(\d*)&m=(\d*)$ \/Template\/user_cate.aspx\?blogger=$1&y=$2&m=$3 [NC,U]

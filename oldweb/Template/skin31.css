@@ -1,0 +1,308 @@
+.loginput
+{
+	border:thin #FFB87B 1px solid; 
+	WIDTH: 96px;
+}
+.logbutton
+{
+
+	font-family:宋体; font-size: 12px; line-height: 14px;
+	background-color:#6D0402;
+	color:FFFFFF;
+	border:none;
+}
+body, html {
+background:#411D1E;
+    color: #EE3333;
+    font-family:ms shell dlg;
+    font-size:12px;
+    margin: 0;
+    line-height:150%;padding: 0 0 0 0 ;
+    text-align:center
+   
+}
+#nadframe{display:none}
+form{
+margin-right: auto;
+margin-left: auto;
+font-size:14px;
+}
+
+.pagelayout{
+    margin: auto;
+    width: 800px;
+    font-size:14px;
+    text-align:left;
+	background:url(/images/skins/skin31/page_layout.gif);
+	background-repeat:repeat-y;
+)
+
+}
+a:visited, a:active, a:link {   
+    color : #FFFFFF;
+    text-decoration : none;
+}
+
+a:hover {
+    color: #EA9421;
+    text-decoration :none;padding:3px;
+    background:#FFFFFF;
+    border-bottom:1px dotted #333
+}
+#menu a:visited, a:active, a:link{   
+    color : #EA9421;
+    text-decoration : none;
+}
+#menu a:hover{
+	color:FFFFFF;
+	background-color:EA9421;
+	text-decoration:none;
+	padding:0px;
+	border:none;}
+
+blockquote {
+	font-size: 0.9em;
+	color:#FFFFFF;
+   	margin:3px;
+	margin-left:50px;
+	border-color:#2C0405;
+	border-style:dashed;
+	border-width:2px;
+	padding:3px;
+	padding-left:10px;
+	background-color:#520403;
+}
+
+#header {
+filter: revealTrans(Transition=5, Duration=23) ;
+  text-align:right;
+  color: #000000;
+  font-size:12px;
+  font-family:ms shell dlg;
+  padding-top:0px;
+  padding-right:0px;
+  background:url(/images/skins/skin31/header.gif) no-repeat;
+  height:195px ;width:800px;
+}
+#headertitle{width:800px; text-align:center; float:left; padding-top:60px;}
+#header #Header1_HeaderTitle{
+color: #FFFFFF;
+ font-size:24px;font-family:arial;line-height:120%;font-weight:bold;color:#FFFFFF;
+}
+
+
+#user_info 
+		{
+		width:800px;
+		text-align:center;
+		float:left;
+		color:#FFFFFF;
+		padding-top:20px;}
+#main {float:left;padding: 0px 0px 0px 0px;width:600px;font-size:14px;line-height:160%;color: #555555;word-wrap:break-word; background:url(../../images/skins/skin31/main_bg.gif)
+
+}
+#footer{clear:both;text-align:center;font-size:12px; background-image:url(/images/skins/skin31/foot_bg.gif); background-position:center; background-repeat:no-repeat; height:173px;}
+#footer_text{
+	padding-top:100px;
+	text-align:center;}
+
+#menu {clear:both;
+	padding-top:20px;
+	width:200px;
+    float:right;
+	height:inherit;
+word-wrap:break-word;
+background:url(/images/skins/skin31/menu_bg.gif)
+}
+#userpic
+		{
+		margin-left:10px;
+		background-color:#6D0402;
+		height:120px;
+		width:120px;
+		text-align:center;}
+#userpic img {
+	padding-top:10px;}
+
+#menu h1 {
+    background:url(/images/skins/skin31/H1_bg.gif) no-repeat;
+	background-position:center;
+	height:57px;
+	color:#EA9421;
+    font-size: 20px;
+    font-weight:bold;
+    margin: 0px;
+	padding-top:20px;
+	text-align:center;
+}
+
+#menu h3 {
+    color:#C1B98A;padding:12px 0px 0px 5px;width:100%;
+    font-size: 14px;
+    font-weight:bold;
+    margin: 0px;
+ height:21px
+ 
+}
+#menu ul {
+    list-style: none;
+	padding-left:30px;
+    margin: 0px 22px 15px 5px;
+    font-size: 14px;
+	color:#EA9421;
+}
+#comments{font-size:12px;line-height:150%}
+#comments a{font-weight:bold}
+.postTitle{font-weight:bold;}
+.postTitle a,.postTitle a:link,.postTitle a:visited{color:#9F8248;font-size:18px}
+
+
+div,select,input{font-size:12px;word-wrap:break-word;}
+div.block {
+  background-position: top left;
+  background-repeat: repeat-y;
+  font-size: 12px;
+  text-align: justify;
+}
+
+div.block_footer {
+  background-position: top left;
+  background-repeat: no-repeat;
+  height: 67px;
+}
+
+div.post {
+  padding-left: 30px;
+}
+
+.dateTitle{color:#808080;font-size:14px;font-weight:bold;line-height:280%}
+div.posttitle {
+  color: #9F8248;
+    font-family: "ms shell dlg";
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.posttitle{
+		background-image:url(/images/skins/skin31/post_title.gif);
+		background-repeat:no-repeat;
+		background-position:left;
+		height:36px;padding-left:60px;
+		text-decoration:none;
+		margin-bottom:4px;
+		padding-top:20PX;
+		border-bottom-color:#EA9421;
+		border-bottom-style:solid;
+		border-bottom-width:2px;
+}
+div.postText{line-height:160%;font-size:14px; color:#CC3333;}
+.posttitle a:visited, .posttitle a:active, .posttitle a:link {  
+    color:#EA9421;
+
+}
+
+.posttitle a:hover {
+    color: #FFFFFF;
+	background-color:#EA9421;
+    text-decoration : none;padding:3px;
+    border-bottom:1px dotted #9F8248;
+}
+.postFoot{line-height:120%;border-bottom:1px dotted #808080;font-size:12px; color:#990400;}
+div.itemdesc {
+  color: #808080;
+  font-size: 12px;
+    text-transform: uppercase;
+}
+
+div.seperator {
+  
+  background-position: top left;
+  background-repeat: no-repeat;
+  margin: 0px 0px 10px 0px;
+}
+
+div.entrylistitem {
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+a.entrylisttitle, a.entrylisttitle:visited, a.entrylisttitle:link, a.entrylisttitle:active {
+  color: #FF6600;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+div.moreinfo {
+  font-size: 12px;
+  text-align: justify;
+}
+
+div.moreinfotitle {
+    color: #FF2a00;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+div.comments {
+  font-size: 12px
+}
+
+div.comment {
+    background-color: #FBFBFB;font-size:12px;
+  border: 0px dotted #DDDDDD;
+  margin: 10px 0px 10px 0px;
+  padding: 10px;
+}
+
+div.comment_author {
+  margin: 5px 0px 5px 0px;font-size:12px;
+}
+
+div.comment_content {
+  margin: 5px 0px 5px 0px;font-size:12px;
+}
+
+#postcomment {
+    border: 0px solid #DDDDDD;
+  font-size: 12px;
+  padding: 10px;
+  text-align: justify;
+  margin-top: 15px;
+  width: 435px;
+}
+
+#postcomment div {
+    color: #808080;
+  font-size: 12px;
+    font-weight: bold;
+  margin: 5px 0px 5px 0px;
+}
+
+#postcomment input.text, textarea {
+  border: 1px solid #DDDDDD;
+  font-size: 12px;
+}
+
+input.text {
+    width : 300px;  
+}
+
+textarea {
+    width : 300px;
+    height : 200px;  
+}
+
+#relatedlinks ul {
+    list-style : none;
+    margin-left : 10px;
+    padding : 0px;
+}
+
+span.highlight
+{
+    background-color:Yellow;      
+}
+.block_title{font-size:14px;font-weight:bold}
+.code{float:left;width:90%;padding:10px;border:1px dotted #d9d9d9;background:#f4f4f4;}
+.postFoot{clear:both;padding-top:6px}
+br{clear:both;}

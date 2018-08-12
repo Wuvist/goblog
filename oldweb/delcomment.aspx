@@ -1,0 +1,1 @@
+﻿<%@ Page Language="vb" AutoEventWireup="false" Inherits="blogwind.delcomment" CodeFile="delcomment.aspx.vb" %>

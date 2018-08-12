@@ -1,0 +1,73 @@
+A:link 
+{ font-family:"Palatino Linotype",simsun,Palatino, serif,"宋体";
+ font-size:10.5pt;
+ text-decoration:none; color:"#FF66FF"}
+
+A:visited 
+{ font-family:"Palatino Linotype",simsun,Palatino, serif,"宋体";
+ font-size:10.5pt;
+ text-decoration:none; color:"#FF66FF"}
+
+A:active 
+{ font-family:"Palatino Linotype",simsun,Palatino, serif,"宋体";
+ font-size:10.5pt;
+ text-decoration:none; color:"#FF66FF"}
+
+A:hover 
+{ font-family:"Palatino Linotype",simsun,Palatino, serif,"宋体";
+ font-size:10.5pt;
+ text-decoration:none; cursor:hand; color:"#cc0099"}
+
+body
+{
+background-color:"#FDE3FD";
+scrollbar-face-color: Ffffff;
+scrollbar-highlight-color:  FFffFF;
+scrollbar-3dlight-color: ffccff ;
+scrollbar-darkshadow-color: Ffffff;
+scrollbar-shadow-color:Ffccff;
+scrollbar-arrow-color: FFCCFF;
+scrollbar-track-color: Ffffff;
+font-size:10.5pt;
+color:#CC66FF;
+}
+
+.title
+{
+ font-family:"Palatino Linotype",simsun,Palatino, serif,"宋体";
+ font-size:12pt;
+ color:#CC66FF;
+}
+.main
+{
+ font-family:"Palatino Linotype",simsun,Palatino, serif,"宋体";
+ font-size:10.5pt;
+ color:#FF66FF;
+}
+.blogs
+{
+ font-family:"Palatino Linotype",simsun,Palatino, serif,"宋体";
+ font-size:10.5pt;
+ color:#000000;
+}
+
+.logbutton
+{
+border: 1px solid #f0e0b1;background-color: #cc66ff;
+font-family:"Palatino Linotype",simsun,Palatino, serif,"宋体"; font-size: 9pt; line-height: 12pt;
+}
+
+.loginput
+{
+BORDER: #cc66ff 1px solid;
+WIDTH: 90px;
+font-family:"Palatino Linotype",simsun,Palatino, serif,"宋体"; font-size: 9pt; line-height: 15px;
+}
+.log
+{
+font-family: "Palatino Linotype",simsun,Palatino, serif,"宋体";
+font-size:12px;
+text-align:left;
+line-height: 14px;
+}
+ 

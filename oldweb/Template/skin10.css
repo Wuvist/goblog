@@ -1,0 +1,65 @@
+.logbutton
+{
+border: 1px solid #B0B0B0;background-color: #A0A0A0;
+font-family:"Palatino Linotype",simsun,"宋体"; font-size: 12px; line-height: 15px;
+}
+
+.loginput
+{
+BORDER: #A0A0A0 1px solid;
+WIDTH: 90px;
+}
+.log
+{
+font-family: "Palatino Linotype",simsun,"宋体";
+font-size:12px;
+text-align:left;
+line-height: 14px;
+}
+
+.tab
+{
+font-family: "Palatino Linotype",simsun,"宋体";
+font-size:14px;
+text-align:left;
+line-height: 14px;
+color:#A0A0A0;
+}
+
+.DateHeader
+{
+font-family: "Palatino Linotype",simsun,"宋体";
+font-size:14pt;
+text-align:left;
+line-height: 16pt;
+font-weight: bold; 
+color:#A0A0A0;
+}
+
+.msg
+{
+font-family: "Palatino Linotype",simsun,"宋体";
+font-size:12pt;
+text-align:justify;
+line-height: 13pt;
+font-weight: normal; 
+color:#333333;
+}
+
+
+.PostFooter
+{
+font-family: "Palatino Linotype",simsun,"宋体";
+font-size:12px;
+text-align: right;
+}
+
+body {color:#A0A0A0;}
+A:link{color:#C0C0C0;text-decoration:none;cursor:hand}
+A:visited{color:#B0B0B0;text-decoration:none;cursor:hand}
+A:active{color:#B0B0B0;text-decoration:none;cursor:hand}
+A:hover{color:#B0B0B0;text-decoration:underline;cursor:hand}
+
+
+#me {position:absolute; left:103;top:413; z-Index:0}
+#blog {position:absolute; left:330;top:129; z-Index:1}

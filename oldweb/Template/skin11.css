@@ -1,0 +1,108 @@
+.logbutton
+{
+border: 1px solid #B0B0B0;background-color: #A9C8DF;
+font-family:宋体; font-size: 12px; line-height: 15px;font-color:#A0A0A0;
+}
+
+.loginput
+{
+BORDER: #A0A0A0 1px solid;
+WIDTH: 90px;
+}
+.log
+{
+font-family: 宋体;
+font-size:12px;
+text-align:left;
+line-height: 14px;
+}
+
+.tab
+{
+font-family: 宋体;
+font-size:14px;
+text-align:left;
+line-height: 14px;
+color:#A0A0A0;
+}
+
+.DateHeader
+{
+font-family: 宋体;
+text-align:left;
+line-height: 16pt;
+font-weight: bold; 
+font-size : 11px; 
+color : #A9C8DF;
+
+}
+
+.msg
+{
+font-family: 宋体;
+font-size:12pt;
+text-align:justify;
+line-height: 13pt;
+font-weight: normal; 
+color:#333333;
+}
+
+.PostFooter
+{
+font-family: 宋体;
+font-size:12px;
+text-align: right;
+}
+
+body {
+background:#000000;
+font-size : 11px; 
+font-family : 宋体,verdana, arial;
+color : #A9C8DF;
+scrollbar-face-color: #000000;
+scrollbar-shadow-color: #325795;  
+scrollbar-highlight-color: #325795;
+scrollbar-3dlight-color: #000000;
+scrollbar-darkshadow-color: #000000;
+scrollbar-track-color: #000000;
+scrollbar-arrow-color: #325795;  
+}
+
+A:link{color:#C0C0C0;text-decoration:none;cursor:hand}
+A:visited{color:#B0B0B0;text-decoration:none;cursor:hand}
+A:active{color:#B0B0B0;text-decoration:none;cursor:hand}
+A:hover{color:#B0B0B0;text-decoration:underline;cursor:hand}
+
+
+#me {position:absolute; left:103;top:413; z-Index:0}
+#blog {position:absolute; left:330;top:129; z-Index:1}
+
+.head {  font-size: 13px; 
+color: #FFFFFF; 
+border: #5B84CB;
+background: url('../Images/skins/skin11/lmhead.jpg'); 
+border-style: ridge; border-top-width: 1px; 
+border-right-width: 1px; border-bottom-width: 1px; 
+border-left-width: 1px; text-align: center;
+}
+
+.borderrr{ 
+border: dashed 1px #CCDBE5;
+}
+
+.blog {
+overflow: auto;
+padding: 10px;
+margin: 0px;
+height: 350px; 
+}
+
+textarea, input, select {
+font-family : 宋体,verdana, arial; 
+border-color: #66CCFF;   
+border-style: solid; 
+border-top-width: 1px; 
+border-left-width: 1px;
+border-right-width: 1px; 
+border-bottom-width: 1px; 
+} 

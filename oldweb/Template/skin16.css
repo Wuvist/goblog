@@ -1,0 +1,81 @@
+TD {
+	FONT-SIZE: 12px; COLOR: #000000
+}
+INPUT {
+	FONT-SIZE: 12px; COLOR: #000000
+}
+SELECT {
+	FONT-SIZE: 12px; COLOR: #000000
+}
+TD.nav {
+	FILTER: DropShadow( Color=#ffffff, OffX=1, OffY=1)
+}
+TD.nav A {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+TD.nav A:hover {
+	COLOR: #000000
+}
+p1 {
+	FONT-SIZE: 12px
+}
+p2 {
+	FONT-SIZE: 12px; LINE-HEIGHT: 110%
+}
+p3 {
+	FONT-SIZE: 14px
+}
+p4 {
+	FONT-SIZE: 14px; LINE-HEIGHT: 130%
+}
+p5 {
+	FONT-SIZE: 12px; LINE-HEIGHT: 180%
+}
+p6 {
+	LINE-HEIGHT: 240%
+}
+p7 {
+	COLOR: #404642; LINE-HEIGHT: 150%
+}
+.text {
+	COLOR: #3c3c3c; LINE-HEIGHT: 120%;FONT-SIZE:  12pt;
+}
+.menu {
+	padding: 10px;
+}
+.text1 {
+	FONT-SIZE: 14px; COLOR: #3c3c3c; LINE-HEIGHT: 180%
+}
+.head {
+	font-size: 18px;
+	font-family: Georgia, "Times New Roman", Times, serif, "宋体";
+	font-style: bold;
+}
+A:link {
+	COLOR: #000000
+}
+A:visited {
+	COLOR: #000000
+}
+A:hover {
+	COLOR: #000000
+}
+.logbutton
+{
+border: 1px solid #000000;background-color: #c0c0c0;
+font-family:宋体; font-size: 12px; line-height: 15px;font-color:#A0A0A0;
+}
+
+.loginput
+{
+BORDER: #A0A0A0 1px solid;
+WIDTH: 120px;
+}
+.log
+{
+font-family: 宋体;
+font-size:12px;
+text-align:left;
+line-height: 14px;
+}
+.style5 {font-size: 16px}

@@ -1,0 +1,339 @@
+body {
+	background: #fff;
+	color: #000;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font: 12px Tahoma, sans-serif;
+}
+.loginput { BORDER-RIGHT: #b6caff 1px solid; BORDER-TOP: #b6caff 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #b6caff 1px solid; WIDTH: 96px; LINE-HEIGHT: 15px; BORDER-BOTTOM: #b6caff 1px solid }
+.logbutton { BORDER-RIGHT: #aaaaaa 1px solid; BORDER-TOP: #aaaaaa 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #aaaaaa 1px solid; LINE-HEIGHT: 15px; BORDER-BOTTOM: #aaaaaa 1px solid; FONT-FAMILY: 宋体; BACKGROUND-COLOR: #F6E39E }
+.logsub { BORDER-RIGHT: #aaaaaa 1px solid; BORDER-TOP: #aaaaaa 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #aaaaaa 1px solid; LINE-HEIGHT: 14px; BORDER-BOTTOM: #aaaaaa 1px solid; FONT-FAMILY: 宋体; BACKGROUND-COLOR: #665582;color:white}
+a:link {
+	text-decoration: none;
+	color: #004A9C;
+}
+a:visited {
+	text-decoration: none;
+	color: #377CBD;
+}
+a:hover {
+	text-decoration: underline;
+	color: #F00;
+}
+a:active {
+	text-decoration: none;
+	color: #004A9C;
+}
+
+#OutBox {
+	text-align: left;
+	margin: auto;
+	width: 100%;
+	background: #FFF;
+}
+
+dl, dd {
+	margin: 0;
+	padding: 0;
+}
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+.TextBox {
+	font: 12px Tahoma, sans-serif;
+	background: #FFFFF0;
+	border: 1px solid #666;
+}
+
+.Button {
+	font: 12px Tahoma, sans-serif;
+	background: #F0F8FF;
+	border: 1px solid #666;
+}
+
+.z {
+	clear: both;
+}
+
+/* Logo 及顶部广告 */
+#Top {
+	margin: 5px 10px 5px 10px;
+	clear: both;
+	background: url(images/new/Newunit.jpg) ;
+}
+#Logo {
+	float: left;
+	width: 150px;
+}
+#TopAds {
+	float: right;
+	width: 595px;
+	text-align: right;
+	padding-right: 4px;
+}
+
+/* 左侧主导航 */
+#LeftNav {
+	float: right;
+	width: 200px;
+	padding-left: 4px;
+	margin: 0 0 4px 10px;
+}
+#LeftNav h3 {
+	margin: 0 0 4px 0;
+	font-size: 12px;
+	font-weight: normal;
+	padding: 0 10px;
+	background: url(Images/litr.gif) no-repeat left top;
+/*	width: 146px;*/
+	height: 21px;
+	line-height: 21px;
+}
+#LeftNav .Nav {
+	list-style: none;
+	margin: 0 0 5px 0;
+	padding: 0;
+}
+#LeftNav .Nav li {
+	text-align: left;
+/*	width: 146px;*/
+	height: 23px;
+	line-height: 23px;
+	background: url(images/navtitle.gif) no-repeat left top;
+	margin: 0 0 -1px 0;
+	padding: 0 12px 0 0;
+}
+#LeftNav .Nav li.Fltr {
+	background: url(images/litr1.gif) no-repeat left top;
+	height: 21px;
+	line-height: 21px;
+}
+#LeftNav .Nav li.n2left {
+	text-align: left;
+	padding: 0 0 0 6px;
+}
+
+/* 右侧内容 */
+.ContentBlocksContainer {
+	float: left;
+	width: 695px;
+	margin: 0 0 4px 10px;
+}
+/* 中栏及右栏小块，IE 的奇怪问题 */
+.ContentBlocksContainer dl.ContentBlock {
+	border: 1px solid #5fb2d5;
+	background: #FFF;
+	margin-bottom: 12px;
+}
+.ContentBlocksContainer dl.ContentBlock dt {
+	padding: 2px 0 2px 8px;
+	border-bottom: 1px solid #5fb2d5;
+	background: #E7EFFF;
+	font-weight: bold;
+}
+.ContentBlocksContainer dl.ContentBlock dt ul {
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: inline;
+}
+.ContentBlocksContainer dl.ContentBlock dt ul li {
+	margin: 0;
+	padding: 0 2px;
+	display: inline;
+}
+.ContentBlocksContainer dd ul {
+	margin: 0;
+	padding: 0;
+}
+.ContentBlocksContainer dd ul li {
+	list-style: none;
+	padding: 2px 0 2px .75em;
+}
+.ContentBlocksContainer h4 {
+	font-size: 12px;
+	margin: 2px;
+}
+.ContentBlocksContainer p {
+	margin: 2px;
+	line-height: 140%;
+}
+/* 首页褐色栏 */
+.ContentBlocksContainer dl.ContentBlock1 {
+	border: 1px solid #5fb2d5;
+	background: #FFF;
+	margin-bottom: 12px;
+}
+.ContentBlocksContainer dl.ContentBlock1 dt {
+	padding: 2px 0 2px 16px;
+	border-bottom: 1px solid #5fb2d5;
+	background: #E7EFFF;
+	font-weight: bold;
+}
+.ContentBlocksContainer dl.ContentBlock1 dt ul {
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: inline;
+}
+.ContentBlocksContainer dl.ContentBlock1 dt ul li {
+	margin: 0;
+	padding: 0 2px;
+	display: inline;
+}
+/* 无边框栏？ */
+.ContentBlocksContainer dl.ContentBlock2 {
+	border: 0 none;
+	background: #FFF;
+	margin-bottom: 12px;
+	height: 192px;
+}
+.ContentBlocksContainer dl.ContentBlock2 dt {
+	padding: 2px 0 2px 8px;
+	border-bottom: 1px solid #DDC89F;
+	background: #F5DEB3;
+	font-weight: bold;
+}
+
+/* 中栏 */
+.MiddleColumn {
+	float: left;
+	width: 342px;
+}
+.CenterColumn {
+	float: left;
+	width: 100%;
+}
+/* 右栏 */
+.RightColumn {
+	float: right;
+	width: 342px;
+}
+
+.ChannelTopMsg {
+	margin: 0 0 4px 0;
+	clear: both;
+}
+
+.RSSIcon {
+	font-weight: bold;
+	background: #FFA200;
+	color: #FFF;
+	padding: 1px 3px;
+}
+
+#TopNewsBig {
+	text-align: center;
+}
+#TopNewsBig h2 {
+	color: #F00;
+	font-size: 16px;
+	margin: 2px 0;
+}
+#TopNewsBig h2 a:link {
+	color: #F00;
+}
+#TopNewsBig h2 a:visited {
+	color: #F00;
+}
+#TopNewsBig h2 a:hover {
+}
+#TopNewsBig h2 a:active {
+	color: #F00;
+}
+#TopNewsBig p {
+	margin: 0;
+	padding: 2px;
+}
+
+.IntroText {
+	border: 1px dashed #369;
+	background: #EEE;
+	padding: 5px;
+	margin: 5px 0;
+	font-size: 12px;
+}
+
+/* 广告位 */
+.BodyAds {
+	clear: both;
+	padding-right: 4px;
+	margin-bottom: 12px;
+	text-align: left;
+	width: 100%;
+}
+.BodyAds ul{
+	margin: 0;
+	padding: 0;
+}
+.BodyAds li{
+	list-style: none;
+	padding: 2px 0 2px .75em;
+}
+
+/* 页脚 */
+#Footer {
+	text-align: center;
+	background: #DEEFDE;
+	border-top: 3px solid #BDCEBD;
+	padding: 5px;
+	clear: both;
+}
+#Copyright {
+	text-align: center;
+	clear: both;
+}
+
+/* 几个导航页面 */
+#AllNavs {
+	width: 100%;
+}
+#AllNavs td {
+	width: 20%;
+	vertical-align: top;
+}
+#AllNavs h3 {
+	margin: 0 0 4px 0;
+	font-size: 12px;
+	font-weight: normal;
+	padding: 0 10px;
+	background: url(Images/litr.gif) no-repeat left top;
+	height: 21px;
+	line-height: 21px;
+}
+#AllNavs .Nav {
+	list-style: none;
+	margin: 0 0 5px 0;
+	padding: 0;
+}
+#AllNavs .Nav li {
+	text-align: right;
+	height: 23px;
+	line-height: 23px;
+	background: url(images/navtitle.gif) no-repeat left top;
+	margin: 0 0 -1px 0;
+	padding: 0 12px 0 0;
+}
+#AllNavs .Nav li.Fltr {
+	background: url(images/litr1.gif) no-repeat left top;
+	height: 21px;
+	line-height: 21px;
+}
+#AllNavs .Nav li.n2left {
+	text-align: left;
+	padding: 0 0 0 6px;
+}
+
+#SearchDiv {
+	background-color: #F0F8FF;
+	margin-bottom: 5px;
+	border-top: 2px solid #B0C4DE;
+	padding: 2px 0;
+	border-bottom: 1px solid #B0C4DE;
+}

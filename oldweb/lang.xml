@@ -1,0 +1,324 @@
+
+<lang>
+	<blogwind>
+		<zh_cn>博克风</zh_cn>
+		<en>Blogwind</en>
+		<de>Blogwind</de>
+	</blogwind>
+	<help>
+		<zh_cn>查看网站帮助</zh_cn>
+		<en>Help</en>
+		<de>Hilfe</de>
+	</help>
+	<randomblog>
+		<zh_cn>阅读随机网志</zh_cn>
+		<en>Random Blogs</en>
+		<de>zuf?llige Blogs</de>
+	</randomblog>
+	<compose>
+		<zh_cn>编写网志</zh_cn>
+		<en>Post an entry</en>
+		<de>Eintrag hinzufügen</de>
+	</compose>
+	<logout>
+		<zh_cn>退出登陆</zh_cn>
+		<en>Log off</en>
+		<de>Abmelden</de>
+	</logout>
+	<stats_blogger>
+		<zh_cn>博客总数</zh_cn>
+		<en>Total Bloggers</en>
+		<de>Blogers gesamt</de>
+	</stats_blogger>
+	<stats_entry>
+		<zh_cn>网志总数</zh_cn>
+		<en>Total Entries</en>
+		<de>Eintr?ge gesamt</de>
+	</stats_entry>
+	<stats_comment>
+		<zh_cn>评论总数</zh_cn>
+		<en>Total Comments</en>
+		<de>Kommentare gesamt</de>
+	</stats_comment>
+	<stats_hits>
+		<zh_cn>累计访问</zh_cn>
+		<en>Total Visits</en>
+		<de>Seitenaufrufe gesamt</de>
+	</stats_hits>
+	<add_link>
+		<zh_cn>添加链接</zh_cn>
+		<en>Add a link</en>
+		<de>Link hinzufügen</de>
+	</add_link>
+	<add_friend>
+		<zh_cn>添加朋友</zh_cn>
+		<en>Add a friend</en>
+		<de>Freund hinzufügen</de>
+	</add_friend>
+	<del_friend>
+		<zh_cn>删除朋友</zh_cn>
+		<en>Delete a friend</en>
+		<de>Freund l?schen</de>
+	</del_friend>
+	<home_hint>
+		<zh_cn>在朋友列表中，点左键打开朋友网志，点右键查看朋友圈</zh_cn>
+		<en>In the friend list, left click to open a friend's blog, and right click to check a friend's friend circle.</en>
+		<de>In der Freundliste, linksklicken des blog eines Freunds zu ?ffnen, und rechtsklicken Freundkreis eines Freunds zu sehen.</de>
+	</home_hint>
+	<my_links>
+		<zh_cn>我的链接</zh_cn>
+		<en>My links</en>
+		<de>Meine Links</de>
+	</my_links>
+	<my_friends>
+		<zh_cn>我的好友</zh_cn>
+		<en>My friends</en>
+		<de>Meine Freunden</de>
+	</my_friends>
+	<prev>
+		<zh_cn>上一页</zh_cn>
+		<en>Prev</en>
+		<de>Zurück</de>
+	</prev>
+	<next>
+		<zh_cn>下一页</zh_cn>
+		<en>Next</en>
+		<de>Weiter</de>
+	</next>
+	<wrote>
+		<zh_cn>写了</zh_cn>
+		<en>wrote</en>
+		<de>schrieb</de>
+	</wrote>
+	<reply>
+		<zh_cn>回复</zh_cn>
+		<en>commented</en>
+		<de>kommentiert</de>
+	</reply>
+	<bookmarked>
+		<zh_cn>摘录了</zh_cn>
+		<en>bookmarked</en>
+		<de>ein Lesezeichen setzte bei</de>
+	</bookmarked>
+	<links>
+		<zh_cn>友情链接</zh_cn>
+		<en>Links</en>
+		<de>Links</de>
+	</links>
+	<url>
+		<zh_cn>网址</zh_cn>
+		<en>URL</en>
+		<de>URL</de>
+	</url>
+	<name>
+		<zh_cn>名称</zh_cn>
+		<en>Name</en>
+		<de>Name</de>
+	</name>
+	<public>
+		<zh_cn>公开</zh_cn>
+		<en>Public</en>
+		<de>?ffentlich</de>
+	</public>
+	<save>
+		<zh_cn>保存</zh_cn>
+		<en>Save</en>
+		<de>Speichern</de>
+	</save>
+	<cancel>
+		<zh_cn>取消</zh_cn>
+		<en>Cancel</en>
+		<de>Abbrechen</de>
+	</cancel>
+					
+	<submit>
+		<zh_cn>提交</zh_cn>
+		<en>Submit</en>
+		<de>Ver?ffentlichen</de>
+	</submit>
+	<friend_id>
+		<zh_cn>您的朋友在博客风中的ID</zh_cn>
+		<en>Your friend's ID in Blogwind</en>
+		<de>ID Ihres Freunds in Blogwind</de>
+	</friend_id>
+	<navigation>
+		<zh_cn>导航</zh_cn>
+		<en>Navigation</en>
+		<de>Navigation</de>
+	</navigation>
+	<homepage>
+		<zh_cn>首页</zh_cn>
+		<en>Homepage</en>
+		<de>Startseite</de>
+	</homepage>
+	<tagline>
+		<zh_cn>网志介绍</zh_cn>
+		<en>Tagline</en>
+		<de>Blog-Slogan</de>
+	</tagline>
+	<categories>
+		<zh_cn>网志分类</zh_cn>
+		<en>categories</en>
+		<de>Kategorien</de>
+	</categories>
+	<links>
+		<zh_cn>个人链接</zh_cn>
+		<en>My Links</en>
+		<de>Meine Links</de>
+	</links>
+	<archive>
+		<zh_cn>网志存档</zh_cn>
+		<en>Archive</en>
+		<de>Archive</de>
+	</archive>
+	<total_visits>
+		<zh_cn>累计浏览</zh_cn>
+		<en>Total visits</en>
+		<de>Seitenaufrufe gesamt</de>
+	</total_visits>
+	<view_blog_in_category>
+		<zh_cn>查看本分类的所有网志</zh_cn>
+		<en>All blogs in this category</en>
+		<de>Alle blogs in dieser Kategorie</de>
+	</view_blog_in_category>
+	<edit_post>
+		<zh_cn>修改此网志</zh_cn>
+		<en>Edit this post</en>
+		<de>Diese Blogeintrag bearbeiten</de>
+	</edit_post>
+	<tag>
+		<zh_cn>标签</zh_cn>
+		<en>Tag</en>
+		<de>Tag</de>
+	</tag>
+	<said>
+		<zh_cn>说</zh_cn>
+		<en>said</en>
+		<de>sagte</de>
+	</said>
+	<name>
+		<zh_cn>名字</zh_cn>
+		<en>Name</en>
+		<de>Name</de>
+	</name>
+	<url>
+		<zh_cn>主页</zh_cn>
+		<en>URL</en>
+		<de>URL</de>
+	</url>
+	<comment_content>
+		<zh_cn>内容</zh_cn>
+		<en>Comment</en>
+		<de>Comment</de>
+	</comment_content>
+	<pls_leave_comment>
+		<zh_cn>请发表评论</zh_cn>
+		<en>Please leave your comment here</en>
+		<de>Kommentar ver?ffentlichen hier.</de>
+	</pls_leave_comment>
+	<na>
+		<zh_cn>无</zh_cn>
+		<en>NA</en>
+		<de>nichts</de>
+	</na>
+	<profile>
+		<zh_cn>个人资料</zh_cn>
+		<en>Personal details</en>
+		<de>Profilinformationen</de>
+	</profile>
+	<manage_category>
+		<zh_cn>分类管理</zh_cn>
+		<en>Manage categories</en>
+		<de>Kategorien verwalten</de>
+	</manage_category>
+	<manage_post>
+		<zh_cn>网志管理</zh_cn>
+		<en>Manage posts</en>
+		<de>Eintr?ge verwalten</de>
+	</manage_post>
+	<template>
+		<zh_cn>选择模板</zh_cn>
+		<en>Templates</en>
+		<de>Designs</de>
+	</template>
+	<manage_links>
+		<zh_cn>链接管理</zh_cn>
+		<en>Manage links</en>
+		<de>Links verwalten</de>
+	</manage_links>
+	<back_to_main>
+		<zh_cn>返回首页</zh_cn>
+		<en>Back to Blogwind</en>
+		<de>Blogwind Startseite</de>
+	</back_to_main>
+	<back_to_blog>
+		<zh_cn>返回网志</zh_cn>
+		<en>Back to my blog</en>
+		<de>Blog Startseite</de>
+	</back_to_blog>
+	<logoff>
+		<zh_cn>退出登陆</zh_cn>
+		<en>Log off</en>
+		<de>Abmelden</de>
+	</logoff>
+	<tag_delimiter>
+		<zh_cn>(多个标签请用逗号分开，不知道什么是标签？)</zh_cn>
+		<en>(Multiple tags seperated by commas. What's a tag?)</en>
+		<de>(Mehrfache Tag trennten sich durch Kommas. Was ist ein Tag?)</de>
+	</tag_delimiter>
+	<upload_img>
+		<zh_cn>上传图片</zh_cn>
+		<en>Upload images</en>
+		<de>Bilder hochladen</de>
+	</upload_img>
+	<qq>
+		<zh_cn>QQ表情</zh_cn>
+		<en>QQ emoticons</en>
+		<de>QQ emoticons</de>
+	</qq>
+	<flag>
+		<zh_cn>小旗帜</zh_cn>
+		<en>Little flags</en>
+		<de>kleine Flaggen</de>
+	</flag>
+	<bun>
+		<zh_cn>小包子</zh_cn>
+		<en>Little buns</en>
+		<de>kleine Br?tchen</de>
+	</bun>
+	<pix>
+		<zh_cn>小图片</zh_cn>
+		<en>Small pix</en>
+		<de>kleine Bilder</de>
+	</pix>
+	<cat>
+		<zh_cn>可爱猫咪</zh_cn>
+		<en>Cutie Kittie</en>
+		<de>nettes K?tzchen</de>
+	</cat>
+	<rss>
+		<zh_cn>RSS导入</zh_cn>
+		<en>Import RSS</en>
+		<de>RSS importieren</de>
+	</rss>
+	<publish>
+		<zh_cn>发表</zh_cn>
+		<en>Publish</en>
+		<de>Ver?ffentlichen</de>
+	</publish>
+	<save>
+		<zh_cn>保存</zh_cn>
+		<en>Save</en>
+		<de>Speichern</de>
+	</save>
+	<contact>
+		<zh_cn>联系</zh_cn>
+		<en>Contact</en>
+		<de>Kontakt</de>
+	</contact>
+	<add_as_friend>
+		<zh_cn>加为朋友</zh_cn>
+		<en>Add as friend</en>
+		<de>Als Freund hinzufügen</de>
+	</add_as_friend>
+</lang>

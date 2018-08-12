@@ -1,0 +1,62 @@
+.logbutton
+{
+border: 1px solid #f0e0b1;background-color: #8B9DE3;
+font-family:"Palatino Linotype",simsun,"宋体"; font-size: 9pt; line-height: 15px;
+}
+
+.loginput
+{
+BORDER: #8B9DE3 1px solid;
+WIDTH: 80px;
+}
+.log
+{
+font-family: "Palatino Linotype",simsun,"宋体";
+font-size:10.5pt;
+text-align:left;
+line-height: 14px;
+}
+
+.tab
+{
+font-family: "Palatino Linotype",simsun,"宋体";
+font-size:10.5pt;
+text-align:left;
+line-height: 14px;
+color:#7B9DE3;
+}
+
+.DateHeader
+{
+font-family: "Palatino Linotype",simsun,"宋体";
+font-size:14pt;
+text-align:left;
+line-height: 18px;
+font-weight: bold; 
+color:#7B9DE3;
+}
+
+
+.PostFooter
+{
+text-align:right;
+}
+
+body {color:#7B9DE3;}
+A:link{color:#BEBEBE;text-decoration:none;cursor:hand}
+A:visited{color:#BEBEBE;text-decoration:none;cursor:hand}
+A:active{color:#BEBEBE;text-decoration:none;cursor:hand}
+A:hover{color:#BEBEBE;text-decoration:underline;cursor:hand}
+
+
+#me {position:absolute; left:531;top:451; z-Index:2}
+#blog {position:absolute; left:141;top:135; z-Index:1}
+
+.blogs
+{
+font-family: arial, "Palatino Linotype",simsun,"宋体";
+text-align:justify';
+color:#7B9DE3;
+font-size:10.5pt;
+word-break:break-all;
+}
