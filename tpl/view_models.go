@@ -7,6 +7,14 @@ import (
 
 var dateFormat = "2006-01-02 15:04:05"
 
+// BlogSummary is the struture for displaying BlogSummary
+type BlogSummary struct {
+	ID           int
+	Title        string
+	Adddate      string
+	CommentCount int
+}
+
 // Blog is the struture for displaying a blog
 type Blog struct {
 	Title    string
@@ -15,6 +23,27 @@ type Blog struct {
 	Content  string
 	Tags     string
 	Adddate  string
+}
+
+func GetBlogSummariesFromCate(cateID int) []*BlogSummary {
+	articleData, _ := models.ArticlesG(
+		qm.Select("index", "title", "add_date", "Comment"),
+		qm.Where("`cate` = ?", cateID),
+		qm.OrderBy("`index` desc")).All()
+
+	blogs := make([]*BlogSummary, len(articleData))
+	for i := 0; i < len(articleData); i++ {
+		b := &BlogSummary{}
+		obj := articleData[i]
+
+		b.ID = obj.Index
+		b.CommentCount = obj.Comment
+		b.Title = obj.Title.String
+		b.Adddate = obj.AddDate.Time.Format(dateFormat)
+		blogs[i] = b
+	}
+
+	return blogs
 }
 
 func GetBlogComments(blogID int) []*Comment {

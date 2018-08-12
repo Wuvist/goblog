@@ -21,6 +21,7 @@ import (
 // esc -o static/css.go -pkg static -include="(.+).css" -prefix="oldweb/" oldweb/Template
 
 //go:generate gorazor skins/skin5_comment.gohtml tpl/skins/skin5_comment.go
+//go:generate gorazor skins/skin5_UserCate.gohtml tpl/skins/skin5_UserCate.go
 
 func main() {
 	// db
@@ -61,7 +62,32 @@ func blogger(c echo.Context) error {
 }
 
 func cate(c echo.Context) error {
-	return c.String(http.StatusOK, "category")
+	blogerUsername := strings.ToLower(c.QueryParam("blogger"))
+	cateID := c.QueryParam("cate_id")
+	cateData, _ := models.UserdefinecategoriesG(qm.Where("`index` = ?", cateID)).One()
+	if cateData == nil {
+		return c.String(http.StatusNotFound, "找不到网志分类")
+	}
+
+	bloggerData, _ := models.BloggersG(qm.Where("`index` = ?", cateData.Blogger)).One()
+	if bloggerData == nil {
+		return c.String(http.StatusNotFound, "找不到博客")
+	}
+
+	blogger := tpl.NewBloggerFromDb(bloggerData)
+	if strings.ToLower(blogger.Username) != blogerUsername {
+		return c.String(http.StatusNotFound, "找不到分类")
+	}
+
+	cate := &tpl.Cate{}
+	cate.CateID = cateData.Index
+	cate.CateName = cateData.Cate
+
+	blogs := tpl.GetBlogSummariesFromCate(cate.CateID)
+
+	page := skins.Skin5_UserCate(blogger, cate, blogs)
+
+	return c.HTML(http.StatusOK, page)
 }
 
 func blog(c echo.Context) error {
