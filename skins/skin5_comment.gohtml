@@ -73,11 +73,9 @@
 <br><br><br><div class="sidetop">
 个人链接
 </div>
-<asp:Repeater id="links" runat="server">
-	<ItemTemplate>
-		<a href = "<%# Container.DataItem("URL") %>" target="_blank"><%# Container.DataItem("link") %></a><br>
-	</ItemTemplate>
-</asp:Repeater>
+@for _, link := range blogger.Links {
+		<a href="@link.URL" target="_blank">@link.Link</a><br>
+}
 <p class="nav">累计浏览: @blogger.VisitorCount</p>
 <br>
 <br>

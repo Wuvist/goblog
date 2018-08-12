@@ -42,6 +42,12 @@ type Cate struct {
 	BlogCount int
 }
 
+// Link is blogger's own links
+type Link struct {
+	URL  string
+	Link string
+}
+
 // Blogger is the struture for blogger info
 type Blogger struct {
 	Username     string
@@ -50,6 +56,37 @@ type Blogger struct {
 	Nick         string
 	VisitorCount int
 	Cates        []*Cate
+	Links        []*Link
+}
+
+func getBloggerCates(bloggerID int) []*Cate {
+	objs, _ := models.UserdefinecategoriesG(qm.Where("`blogger` = ?", bloggerID)).All()
+	cates := make([]*Cate, len(objs))
+	for i := 0; i < len(objs); i++ {
+		cate := &Cate{}
+		obj := objs[i]
+		cate.CateName = obj.Cate
+		cate.CateID = obj.Index
+		cate.BlogCount = obj.Files
+		cates[i] = cate
+
+	}
+	return cates
+}
+
+func getBloggerLinks(bloggerID int) []*Link {
+	objs, _ := models.LinksG(qm.Where("`blogger` = ? and reveal = 1",
+		bloggerID)).All()
+	links := make([]*Link, len(objs))
+	for i := 0; i < len(objs); i++ {
+		link := &Link{}
+		obj := objs[i]
+		link.Link = obj.Link
+		link.URL = obj.URL
+		links[i] = link
+
+	}
+	return links
 }
 
 // NewBloggerFromDb create blogger struct from db model
@@ -61,16 +98,8 @@ func NewBloggerFromDb(data *models.Blogger) *Blogger {
 	b.BlogName = data.Blogname
 	b.VisitorCount = data.Visitor
 
-	objs, _ := models.UserdefinecategoriesG(qm.Where("`blogger` = ?", data.Index)).All()
-	b.Cates = make([]*Cate, len(objs))
-	for i := 0; i < len(objs); i++ {
-		cate := &Cate{}
-		obj := objs[i]
-		cate.CateName = obj.Cate
-		cate.CateID = obj.Index
-		cate.BlogCount = obj.Files
-		b.Cates[i] = cate
-	}
+	b.Cates = getBloggerCates(data.Index)
+	b.Links = getBloggerLinks(data.Index)
 
 	return b
 }
