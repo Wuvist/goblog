@@ -14,7 +14,10 @@ import (
 	"github.com/volatiletech/sqlboiler/boil"
 )
 
-//go:generate esc -o static/css.go -pkg static -include="(.+).css" -prefix="oldweb/" oldweb/Template
+// run manually, not sure why go generate failed
+// esc -o static/css.go -pkg static -include="(.+).css" -prefix="oldweb/" oldweb/Template
+
+//go:generate gorazor tpl/skin5_comment.gohtml tpl/skin5_comment.go
 
 func main() {
 	// db
@@ -59,5 +62,11 @@ func cate(c echo.Context) error {
 }
 
 func blog(c echo.Context) error {
-	return c.String(http.StatusOK, "blog page")
+	bloggerID := c.QueryParam("id")
+	blogger, _ := models.BloggersG(qm.Where("id = ?", bloggerID)).One()
+	if blogger == nil {
+		return c.String(http.StatusNotFound, "找不到博客")
+	}
+
+	return c.String(http.StatusOK, blogger.Nick.String)
 }
