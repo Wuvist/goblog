@@ -1,3 +1,5 @@
+-- 从原来sql server导入数据到mysql后，需要做的表结构修改，以符合sqlboiler需要
+
 ALTER TABLE `blogwind`.`users` 
 ADD PRIMARY KEY (`id`);
 ;
