@@ -20,9 +20,7 @@ import (
 // run manually, not sure why go generate failed
 // esc -o static/css.go -pkg static -include="(.+).css" -prefix="oldweb/" oldweb/Template
 
-//go:generate gorazor skins/skin5_comment.gohtml tpl/skins/skin5_comment.go
-//go:generate gorazor skins/skin5_UserCate.gohtml tpl/skins/skin5_UserCate.go
-//go:generate gorazor skins/skin5_default.gohtml tpl/skins/skin5_default.go
+//go:generate gorazor skins tpl/skins
 
 func main() {
 	// db
@@ -35,6 +33,7 @@ func main() {
 
 	// web
 	e := echo.New()
+	e.GET("/", home)
 	e.GET("/blogger.go", blogger)
 	e.GET("/cate.go", cate)
 	e.GET("/blog.go", blog)
@@ -48,7 +47,26 @@ func main() {
 
 // Handler
 func home(c echo.Context) error {
-	return c.String(http.StatusOK, "homepage")
+	objs, err := models.BloggersG(qm.Select("blogname", "id", "nick"),
+		qm.Where("reveal = 1 and blogs > ?", 0),
+		qm.OrderBy("last_post desc")).All()
+
+	if err != nil {
+		println(err.Error())
+	}
+
+	bloggers := make([]*tpl.Blogger, len(objs))
+	for i := 0; i < len(objs); i++ {
+		b := &tpl.Blogger{}
+		obj := objs[i]
+		b.Username = obj.ID
+		b.BlogName = obj.Blogname
+		b.Nick = obj.Nick.String
+		bloggers[i] = b
+	}
+
+	page := skins.Home(bloggers)
+	return c.HTML(http.StatusOK, page)
 }
 
 func blogger(c echo.Context) error {
