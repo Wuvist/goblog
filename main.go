@@ -35,10 +35,9 @@ func main() {
 
 	// web
 	e := echo.New()
-	e.GET("/", home)
-	e.GET("/blogger", blogger)
-	e.GET("/cate", cate)
-	e.GET("/blog", blog)
+	e.GET("/blogger.go", blogger)
+	e.GET("/cate.go", cate)
+	e.GET("/blog.go", blog)
 
 	// static
 	e.GET("/Template/*", echo.WrapHandler(http.FileServer(static.FS(false))))

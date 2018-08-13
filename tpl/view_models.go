@@ -25,6 +25,7 @@ type Blog struct {
 	Adddate  string
 }
 
+// GetBlogSummariesFromCate get a blogs of a blog category
 func GetBlogSummariesFromCate(cateID int) []*BlogSummary {
 	articleData, _ := models.ArticlesG(
 		qm.Select("index", "title", "add_date", "Comment"),
@@ -46,6 +47,7 @@ func GetBlogSummariesFromCate(cateID int) []*BlogSummary {
 	return blogs
 }
 
+// GetBlogSummariesFromBlogger get top 20 blogs of a blogger
 func GetBlogSummariesFromBlogger(bloggerID int) []*BlogSummary {
 	articleData, _ := models.ArticlesG(
 		qm.Select("index", "title", "add_date", "Comment"),
@@ -68,6 +70,7 @@ func GetBlogSummariesFromBlogger(bloggerID int) []*BlogSummary {
 	return blogs
 }
 
+// GetBlogComments get all comments of a blog
 func GetBlogComments(blogID int) []*Comment {
 	objs, _ := models.CommentsG(
 		qm.Where("`article` = ?", blogID),
