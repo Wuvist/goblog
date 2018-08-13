@@ -22,6 +22,7 @@ import (
 
 //go:generate gorazor skins/skin5_comment.gohtml tpl/skins/skin5_comment.go
 //go:generate gorazor skins/skin5_UserCate.gohtml tpl/skins/skin5_UserCate.go
+//go:generate gorazor skins/skin5_default.gohtml tpl/skins/skin5_default.go
 
 func main() {
 	// db
@@ -52,13 +53,23 @@ func home(c echo.Context) error {
 }
 
 func blogger(c echo.Context) error {
-	bloggerID := c.QueryParam("id")
-	blogger, _ := models.BloggersG(qm.Where("id = ?", bloggerID)).One()
-	if blogger == nil {
+	blogerUsername := c.QueryParam("blogger")
+
+	bloggerData, err := models.BloggersG(qm.Where("id = ?", blogerUsername)).One()
+	if err != nil {
+		println(err.Error())
+	}
+	if bloggerData == nil {
 		return c.String(http.StatusNotFound, "找不到博客")
 	}
 
-	return c.String(http.StatusOK, blogger.Nick.String)
+	blogger := tpl.NewBloggerFromDb(bloggerData)
+
+	blogs := tpl.GetBlogSummariesFromBlogger(bloggerData.Index)
+
+	page := skins.Skin5_default(blogger, blogs)
+
+	return c.HTML(http.StatusOK, page)
 }
 
 func cate(c echo.Context) error {

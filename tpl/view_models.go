@@ -46,6 +46,28 @@ func GetBlogSummariesFromCate(cateID int) []*BlogSummary {
 	return blogs
 }
 
+func GetBlogSummariesFromBlogger(bloggerID int) []*BlogSummary {
+	articleData, _ := models.ArticlesG(
+		qm.Select("index", "title", "add_date", "Comment"),
+		qm.Where("`blogger` = ?", bloggerID),
+		qm.OrderBy("`index` desc"),
+		qm.Limit(20)).All()
+
+	blogs := make([]*BlogSummary, len(articleData))
+	for i := 0; i < len(articleData); i++ {
+		b := &BlogSummary{}
+		obj := articleData[i]
+
+		b.ID = obj.Index
+		b.CommentCount = obj.Comment
+		b.Title = obj.Title.String
+		b.Adddate = obj.AddDate.Time.Format(dateFormat)
+		blogs[i] = b
+	}
+
+	return blogs
+}
+
 func GetBlogComments(blogID int) []*Comment {
 	objs, _ := models.CommentsG(
 		qm.Where("`article` = ?", blogID),
