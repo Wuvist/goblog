@@ -49,7 +49,9 @@ func Skin5_comment(blogger *tpl.Blogger, blog *tpl.Blog, comments []*tpl.Comment
 	_buffer.WriteString(gorazor.HTMLEscape(blogger.Username))
 	_buffer.WriteString("/\">")
 	_buffer.WriteString(gorazor.HTMLEscape(blogger.BlogName))
-	_buffer.WriteString("首页</a><BR>\n  <a>联系</a><BR>\n<br>\n\n<div class=\"sidetop\"><br>\n个人档案\n</div>\n<Acme:userpic runat=\"server\" ID=\"userpic1\" deco=\"<div align='center'><br><img src='\" enddeco=\"'></div>\"/>")
+	_buffer.WriteString("首页</a><BR>\n  <a>联系</a><BR>\n<br>\n\n<div class=\"sidetop\"><br>\n个人档案\n</div>\n<div align='center'><br><img src='//storage.googleapis.com/blogwind/images/userpic/")
+	_buffer.WriteString(gorazor.HTMLEscape((blogger.Username)))
+	_buffer.WriteString(".jpg'></div>")
 	_buffer.WriteString(gorazor.HTMLEscape(blogger.Info))
 	_buffer.WriteString("\n<br>\n<br><br><br><div class=\"sidetop\">\n网志分类\n</div>")
 	for _, cate := range blogger.Cates {
