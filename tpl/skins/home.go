@@ -19,7 +19,7 @@ func Home(bloggers []*tpl.Blogger) string {
 		_buffer.WriteString(gorazor.HTMLEscape(blogger.Nick))
 		_buffer.WriteString("\n\t\t  </div><br>")
 	}
-	_buffer.WriteString("\n</div>\n</div>\n</TD>\n<TD bgColor=\"#e0e0b1\" height=\"500\" width=\"150\" valign=\"top\"><div class=\"side\">\n<div class=\"sidetop\">\n导航\n</div> \n  <a href=\"/\">博客风</a><BR>\n<br>\n<br>\n<br><br><br><div class=\"sidetop\">\n站点声明\n</div>\n<br /><br />\n自2003年上线至今（2018年），博客风已经运作了近15年。今年春节前服务器硬盘出现硬件故障，<a href=\"https://github.com/Wuvist/goblog\">经过努力</a>目前站点恢复了2017年年底的一个数据库备份；但仅提供静态访问；网志发表、评论功能关闭。\n<br /><br />\n您如果还想写博客，建议考虑<a href=\"http://www.jianshu.com\">简书</a>等网站。\n<br /><br />\n感谢您还记得博客风！\n<br /><br />\n此致，\n问天\n<br /><br />\n<img src=\"https://wx1.sinaimg.cn/mw690/63456539gy1fu8fhp8f9mj20lr0m3gpj.jpg\" style=\"width:150px\" />\n<br>\n<br>\n</div>\n</TD>\n</TR>\n</TABLE>\n</body>\n</html>")
+	_buffer.WriteString("\n</div>\n</div>\n</TD>\n<TD bgColor=\"#e0e0b1\" height=\"500\" width=\"150\" valign=\"top\"><div class=\"side\">\n<div class=\"sidetop\">\n导航\n</div> \n  <a href=\"/\">博客风</a><BR>\n<br>\n<br>\n<br><br><br><div class=\"sidetop\">\n站点声明\n</div>\n<br /><br />\n自2003年上线至今（2018年），博客风已经运作了近15年。今年春节前服务器硬盘出现硬件故障，<a href=\"https://github.com/Wuvist/goblog\">经过努力</a>目前站点恢复了2017年年底的一个数据库备份；但仅提供静态访问；网志发表、评论功能关闭。\n<br /><br />\n您如果还想写博客，建议考虑<a href=\"http://www.jianshu.com\">简书</a>等网站。\n<br /><br />\n感谢您还记得博客风！\n<br /><br />\n此致，\n问天\n<br>\n<br>\n</div>\n</TD>\n</TR>\n</TABLE>\n</body>\n</html>")
 
 	return _buffer.String()
 }
