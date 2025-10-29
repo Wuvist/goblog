@@ -5,6 +5,7 @@ import (
 	"errors"
 	"net/http"
 	"os"
+	"regexp"
 	"strconv"
 	"strings"
 
@@ -38,6 +39,7 @@ func main() {
 
 	// web
 	e := echo.New()
+	e.Pre(friendlyURLRewrite())
 	e.GET("/", home)
 	e.GET("/blogger.go", blogger)
 	e.GET("/cate.go", cate)
@@ -187,4 +189,71 @@ func blog(c echo.Context) error {
 	page := skins.Skin5_comment(blogger, blog, comments)
 
 	return c.HTML(http.StatusOK, page)
+}
+
+var (
+	blogURLPattern    = regexp.MustCompile(`^/([A-Za-z0-9_]+)/([0-9]+)\.shtml$`)
+	cateURLPattern    = regexp.MustCompile(`^/([A-Za-z0-9_]+)/cate([0-9]+)\.shtml$`)
+	bloggerURLPattern = regexp.MustCompile(`^/([A-Za-z0-9_]+)/?$`)
+
+	reservedFriendlyRoots = map[string]struct{}{
+		"template": {},
+	}
+)
+
+func friendlyURLRewrite() echo.MiddlewareFunc {
+	return func(next echo.HandlerFunc) echo.HandlerFunc {
+		return func(c echo.Context) error {
+			req := c.Request()
+			path := req.URL.Path
+
+			if path == "/" {
+				return next(c)
+			}
+
+			if matches := blogURLPattern.FindStringSubmatch(path); matches != nil {
+				username := matches[1]
+				articleID := matches[2]
+				rewriteRequest(req, "/blog.go", map[string]string{
+					"blogger":    username,
+					"article_id": articleID,
+				})
+				c.SetPath("/blog.go")
+			} else if matches := cateURLPattern.FindStringSubmatch(path); matches != nil {
+				username := matches[1]
+				cateID := matches[2]
+				rewriteRequest(req, "/cate.go", map[string]string{
+					"blogger": username,
+					"cate_id": cateID,
+				})
+				c.SetPath("/cate.go")
+			} else if matches := bloggerURLPattern.FindStringSubmatch(path); matches != nil {
+				username := matches[1]
+				if _, ok := reservedFriendlyRoots[strings.ToLower(username)]; ok {
+					return next(c)
+				}
+				rewriteRequest(req, "/blogger.go", map[string]string{
+					"blogger": username,
+				})
+				c.SetPath("/blogger.go")
+			}
+
+			return next(c)
+		}
+	}
+}
+
+func rewriteRequest(req *http.Request, targetPath string, params map[string]string) {
+	query := req.URL.Query()
+	for key, value := range params {
+		query.Set(key, value)
+	}
+	req.URL.RawQuery = query.Encode()
+	req.URL.Path = targetPath
+	req.URL.RawPath = targetPath
+	if req.URL.RawQuery != "" {
+		req.RequestURI = targetPath + "?" + req.URL.RawQuery
+	} else {
+		req.RequestURI = targetPath
+	}
 }
