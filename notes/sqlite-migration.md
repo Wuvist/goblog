@@ -1,6 +1,6 @@
-# Upgrading SQLBoiler for SQLite Support
+# SQLite Migration Workflow
 
-This repository still contains sqlboiler v2.7.x–generated models that target MySQL. Moving to SQLite with the current major (v4) of sqlboiler requires regenerating every model file, because v4 introduces a new module path (`github.com/aarondl/sqlboiler/v4`) and API changes (context-aware query methods, different helper packages, new null types, etc.). The steps below outline the migration process.
+This project now uses sqlboiler v4 against `modernc.org/sqlite`. The checklist below documents how to rebuild the schema, regenerate models, and copy data from the legacy MySQL instance into SQLite. Keep the steps scripted so future refreshes stay reproducible.
 
 ## 1. Install the New Tooling
 
@@ -50,5 +50,19 @@ Expect all generated files to switch imports to `github.com/aarondl/sqlboiler/v4
 - Switch the runtime driver to `modernc.org/sqlite` (e.g., import `_ "modernc.org/sqlite"` and open connections via `sql.Open("sqlite", "file:blogwind.db?_pragma=busy_timeout=5000")`).
 - Revisit all raw SQL (`queries.Raw`, etc.) because SQLite uses positional parameters `?` instead of MySQL-style `?` with type-specific coercions.
 - Run `go test ./...` to catch any behavioural drift.
+
+## 6. Import Data from MySQL
+
+Use the migration helper (`cmd/migrate`) to copy rows from the original MySQL database into the SQLite file created above:
+
+```bash
+MYSQL_CONNSTR='user:pass@tcp(localhost:3306)/blogwind?parseTime=true' \
+SQLITE_DSN='file:blogwind.db?_pragma=foreign_keys(OFF)' \
+go run ./cmd/migrate
+```
+
+The command truncates the destination tables (`blogger`, `articles`, `comment`, `links`, `userdefinecategory`) before inserting. Point `SQLITE_DSN` at a backup copy when testing.
+
+---
 
 Because these steps touch every model file, tackle them on a clean branch and keep a MySQL-capable version tagged for historical reference.

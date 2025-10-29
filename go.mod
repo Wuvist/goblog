@@ -7,6 +7,7 @@ require (
 	github.com/aarondl/sqlboiler/v4 v4.19.5
 	github.com/aarondl/strmangle v0.0.9
 	github.com/friendsofgo/errors v0.9.2
+	github.com/go-sql-driver/mysql v1.6.0
 	github.com/labstack/echo v3.3.10+incompatible
 	github.com/sipin/gorazor v1.2.2
 	modernc.org/sqlite v1.18.1
