@@ -50,7 +50,7 @@ func main() {
 	e.GET("/Template/*", echo.WrapHandler(http.FileServer(static.FS(false))))
 
 	// Start server
-	e.Logger.Fatal(e.Start(":8080"))
+	e.Logger.Fatal(e.Start(":8181"))
 }
 
 // Handler
