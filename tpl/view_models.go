@@ -1,13 +1,16 @@
 package tpl
 
 import (
+	"context"
+
 	"github.com/Wuvist/goblog/models"
-	"github.com/volatiletech/sqlboiler/queries/qm"
+	"github.com/aarondl/sqlboiler/v4/boil"
+	"github.com/aarondl/sqlboiler/v4/queries/qm"
 )
 
 var dateFormat = "2006-01-02 15:04:05"
 
-// BlogSummary is the struture for displaying BlogSummary
+// BlogSummary represents minimal blog metadata for list views.
 type BlogSummary struct {
 	ID           int
 	Title        string
@@ -15,7 +18,7 @@ type BlogSummary struct {
 	CommentCount int
 }
 
-// Blog is the struture for displaying a blog
+// Blog represents a full blog post for rendering views.
 type Blog struct {
 	Title    string
 	CateName string
@@ -25,102 +28,152 @@ type Blog struct {
 	Adddate  string
 }
 
-// GetBlogSummariesFromCate get a blogs of a blog category
-func GetBlogSummariesFromCate(cateID int) []*BlogSummary {
-	articleData, _ := models.ArticlesG(
-		qm.Select("index", "title", "add_date", "Comment"),
-		qm.Where("`cate` = ?", cateID),
-		qm.OrderBy("`index` desc")).All()
+// GetBlogSummariesFromCate returns all blogs in a category ordered by latest first.
+func GetBlogSummariesFromCate(ctx context.Context, cateID int64) []*BlogSummary {
+	exec := boil.GetContextDB()
+	if exec == nil {
+		return nil
+	}
 
-	blogs := make([]*BlogSummary, len(articleData))
-	for i := 0; i < len(articleData); i++ {
-		b := &BlogSummary{}
-		obj := articleData[i]
+	records, err := models.Articles(
+		qm.Where("cate = ?", cateID),
+		qm.OrderBy("\"articles\".\"index\" DESC"),
+	).All(ctx, exec)
+	if err != nil {
+		return nil
+	}
 
-		b.ID = obj.Index
-		b.CommentCount = obj.Comment
-		b.Title = obj.Title.String
-		b.Adddate = obj.AddDate.Time.Format(dateFormat)
-		blogs[i] = b
+	blogs := make([]*BlogSummary, 0, len(records))
+	for _, obj := range records {
+		summary := &BlogSummary{
+			Title:        obj.Title.String,
+			CommentCount: int(obj.Comment),
+		}
+		if obj.Index.Valid {
+			summary.ID = int(obj.Index.Int64)
+		}
+		if obj.AddDate.Valid {
+			summary.Adddate = obj.AddDate.Time.Format(dateFormat)
+		}
+		blogs = append(blogs, summary)
 	}
 
 	return blogs
 }
 
-// GetBlogSummariesFromBlogger get top 20 blogs of a blogger
-func GetBlogSummariesFromBlogger(bloggerID int) []*BlogSummary {
-	articleData, _ := models.ArticlesG(
-		qm.Select("index", "title", "add_date", "Comment"),
-		qm.Where("`blogger` = ?", bloggerID),
-		qm.OrderBy("`index` desc"),
-		qm.Limit(20)).All()
+// GetBlogSummariesFromBlogger returns the latest 20 blogs for a blogger.
+func GetBlogSummariesFromBlogger(ctx context.Context, bloggerID int64) []*BlogSummary {
+	exec := boil.GetContextDB()
+	if exec == nil {
+		return nil
+	}
 
-	blogs := make([]*BlogSummary, len(articleData))
-	for i := 0; i < len(articleData); i++ {
-		b := &BlogSummary{}
-		obj := articleData[i]
+	records, err := models.Articles(
+		qm.Where("blogger = ?", bloggerID),
+		qm.OrderBy("\"articles\".\"index\" DESC"),
+		qm.Limit(20),
+	).All(ctx, exec)
+	if err != nil {
+		return nil
+	}
 
-		b.ID = obj.Index
-		b.CommentCount = obj.Comment
-		b.Title = obj.Title.String
-		b.Adddate = obj.AddDate.Time.Format(dateFormat)
-		blogs[i] = b
+	blogs := make([]*BlogSummary, 0, len(records))
+	for _, obj := range records {
+		summary := &BlogSummary{
+			Title:        obj.Title.String,
+			CommentCount: int(obj.Comment),
+		}
+		if obj.Index.Valid {
+			summary.ID = int(obj.Index.Int64)
+		}
+		if obj.AddDate.Valid {
+			summary.Adddate = obj.AddDate.Time.Format(dateFormat)
+		}
+		blogs = append(blogs, summary)
 	}
 
 	return blogs
 }
 
-// GetBlogComments get all comments of a blog
-func GetBlogComments(blogID int) []*Comment {
-	objs, _ := models.CommentsG(
-		qm.Where("`article` = ?", blogID),
-		qm.OrderBy("`index` desc")).All()
-
-	comments := make([]*Comment, len(objs))
-	for i := 0; i < len(objs); i++ {
-		c := &Comment{}
-		obj := objs[i]
-		c.Author = obj.Author.String
-		c.Content = obj.Content
-		c.Adddate = obj.AddDate.Format(dateFormat)
-		comments[i] = c
+// GetBlogComments fetches all comments for a blog sorted by newest first.
+func GetBlogComments(ctx context.Context, blogID int64) []*Comment {
+	exec := boil.GetContextDB()
+	if exec == nil {
+		return nil
 	}
+
+	records, err := models.Comments(
+		qm.Where("article = ?", blogID),
+		qm.OrderBy("\"comment\".\"index\" DESC"),
+	).All(ctx, exec)
+	if err != nil {
+		return nil
+	}
+
+	comments := make([]*Comment, 0, len(records))
+	for _, obj := range records {
+		comment := &Comment{
+			Content: obj.Content,
+			Adddate: obj.AddDate.Format(dateFormat),
+		}
+		if obj.Author.Valid {
+			comment.Author = obj.Author.String
+		}
+		comments = append(comments, comment)
+	}
+
 	return comments
 }
 
-// NewBlogFromDb create blog struct from db model
-func NewBlogFromDb(data *models.Article) *Blog {
-	b := &Blog{}
-	b.Title = data.Title.String
-	if b.Title == "" {
-		b.Title = "无题"
-	}
-	b.Content = data.Content.String
-	b.Adddate = data.AddDate.Time.Format(dateFormat)
-
-	cateData, _ := models.UserdefinecategoriesG(qm.Where("`index` = ?", data.Cate.Int)).One()
-	if cateData != nil {
-		b.CateID = cateData.Index
-		b.CateName = cateData.Cate
+// NewBlogFromDb materialises a Blog from the generated Article model.
+func NewBlogFromDb(ctx context.Context, data *models.Article) *Blog {
+	if data == nil {
+		return nil
 	}
 
-	return b
+	blog := &Blog{
+		Title:   data.Title.String,
+		Content: data.Content.String,
+	}
+	if blog.Title == "" {
+		blog.Title = "无题"
+	}
+	if data.AddDate.Valid {
+		blog.Adddate = data.AddDate.Time.Format(dateFormat)
+	}
+
+	if data.Cate.Valid {
+		exec := boil.GetContextDB()
+		if exec != nil {
+			cate, err := models.Userdefinecategories(
+				qm.Where("\"index\" = ?", data.Cate.Int64),
+			).One(ctx, exec)
+			if err == nil && cate != nil {
+				if cate.Index.Valid {
+					blog.CateID = int(cate.Index.Int64)
+				}
+				blog.CateName = cate.Cate
+			}
+		}
+	}
+
+	return blog
 }
 
-// Cate is blogger's own blog categories
+// Cate represents a blogger's custom category.
 type Cate struct {
 	CateName  string
 	CateID    int
 	BlogCount int
 }
 
-// Link is blogger's own links
+// Link represents a blogger's custom link.
 type Link struct {
 	URL  string
 	Link string
 }
 
-// Blogger is the struture for blogger info
+// Blogger aggregates blogger metadata and their related categories/links.
 type Blogger struct {
 	Username     string
 	BlogName     string
@@ -131,49 +184,82 @@ type Blogger struct {
 	Links        []*Link
 }
 
-func getBloggerCates(bloggerID int) []*Cate {
-	objs, _ := models.UserdefinecategoriesG(qm.Where("`blogger` = ?", bloggerID)).All()
-	cates := make([]*Cate, len(objs))
-	for i := 0; i < len(objs); i++ {
-		cate := &Cate{}
-		obj := objs[i]
-		cate.CateName = obj.Cate
-		cate.CateID = obj.Index
-		cate.BlogCount = obj.Files
-		cates[i] = cate
-
+func getBloggerCates(ctx context.Context, bloggerID int64) []*Cate {
+	exec := boil.GetContextDB()
+	if exec == nil {
+		return nil
 	}
+
+	records, err := models.Userdefinecategories(
+		qm.Where("blogger = ?", bloggerID),
+	).All(ctx, exec)
+	if err != nil {
+		return nil
+	}
+
+	cates := make([]*Cate, 0, len(records))
+	for _, obj := range records {
+		cate := &Cate{
+			CateName:  obj.Cate,
+			BlogCount: int(obj.Files),
+		}
+		if obj.Index.Valid {
+			cate.CateID = int(obj.Index.Int64)
+		}
+		cates = append(cates, cate)
+	}
+
 	return cates
 }
 
-func getBloggerLinks(bloggerID int) []*Link {
-	objs, _ := models.LinksG(qm.Where("`blogger` = ? and reveal = 1",
-		bloggerID)).All()
-	links := make([]*Link, len(objs))
-	for i := 0; i < len(objs); i++ {
-		link := &Link{}
-		obj := objs[i]
-		link.Link = obj.Link
-		link.URL = obj.URL
-		links[i] = link
-
+func getBloggerLinks(ctx context.Context, bloggerID int64) []*Link {
+	exec := boil.GetContextDB()
+	if exec == nil {
+		return nil
 	}
+
+	records, err := models.Links(
+		qm.Where("blogger = ? AND reveal = 1", bloggerID),
+	).All(ctx, exec)
+	if err != nil {
+		return nil
+	}
+
+	links := make([]*Link, 0, len(records))
+	for _, obj := range records {
+		link := &Link{
+			Link: obj.Link,
+			URL:  obj.URL,
+		}
+		links = append(links, link)
+	}
+
 	return links
 }
 
-// NewBloggerFromDb create blogger struct from db model
-func NewBloggerFromDb(data *models.Blogger) *Blogger {
-	b := &Blogger{}
-	b.Username = data.ID
-	b.Nick = data.Nick.String
-	b.Info = data.Intro.String
-	b.BlogName = data.Blogname
-	b.VisitorCount = data.Visitor
+// NewBloggerFromDb hydrates a Blogger view model from the generated Blogger model.
+func NewBloggerFromDb(ctx context.Context, data *models.Blogger) *Blogger {
+	if data == nil {
+		return nil
+	}
 
-	b.Cates = getBloggerCates(data.Index)
-	b.Links = getBloggerLinks(data.Index)
+	blogger := &Blogger{
+		Username:     data.ID,
+		Nick:         data.Nick.String,
+		Info:         data.Intro.String,
+		BlogName:     data.Blogname,
+		VisitorCount: int(data.Visitor),
+	}
 
-	return b
+	bloggerID := int64(0)
+	if data.Index.Valid {
+		bloggerID = data.Index.Int64
+	}
+
+	blogger.Cates = getBloggerCates(ctx, bloggerID)
+	blogger.Links = getBloggerLinks(ctx, bloggerID)
+
+	return blogger
 }
 
 // Comment is the struture for displaying a comment
