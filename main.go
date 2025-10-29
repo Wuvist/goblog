@@ -3,6 +3,7 @@ package main
 import (
 	"database/sql"
 	"errors"
+	"fmt"
 	"net/http"
 	"os"
 	"regexp"
@@ -195,6 +196,7 @@ var (
 	blogURLPattern    = regexp.MustCompile(`^/([A-Za-z0-9_]+)/([0-9]+)\.shtml$`)
 	cateURLPattern    = regexp.MustCompile(`^/([A-Za-z0-9_]+)/cate([0-9]+)\.shtml$`)
 	bloggerURLPattern = regexp.MustCompile(`^/([A-Za-z0-9_]+)/?$`)
+	oldImagePattern   = regexp.MustCompile(`^/([A-Za-z0-9_]+)/([A-Za-z0-9_]+)\.jpg$`)
 
 	reservedFriendlyRoots = map[string]struct{}{
 		"template": {},
@@ -211,7 +213,12 @@ func friendlyURLRewrite() echo.MiddlewareFunc {
 				return next(c)
 			}
 
-			if matches := blogURLPattern.FindStringSubmatch(path); matches != nil {
+			if matches := oldImagePattern.FindStringSubmatch(path); matches != nil {
+				username := matches[1]
+				filename := matches[2]
+				target := fmt.Sprintf("https://storage.googleapis.com/blogwind/images/old/%s/%s.jpg", username, filename)
+				return c.Redirect(http.StatusMovedPermanently, target)
+			} else if matches := blogURLPattern.FindStringSubmatch(path); matches != nil {
 				username := matches[1]
 				articleID := matches[2]
 				rewriteRequest(req, "/blog.go", map[string]string{
