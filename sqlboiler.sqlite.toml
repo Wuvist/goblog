@@ -1,0 +1,8 @@
+output = "models"
+pkgname = "models"
+wipe = true
+add-global-variants = true
+
+[sqlite3]
+  dbname = "blogwind.db"
+  fkmode = "auto"
