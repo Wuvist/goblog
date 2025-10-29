@@ -37,7 +37,7 @@ func GetBlogSummariesFromCate(ctx context.Context, cateID int64) []*BlogSummary 
 
 	records, err := models.Articles(
 		qm.Where("cate = ?", cateID),
-		qm.OrderBy("index DESC"),
+		qm.OrderBy("\"articles\".\"index\" DESC"),
 	).All(ctx, exec)
 	if err != nil {
 		return nil
@@ -70,7 +70,7 @@ func GetBlogSummariesFromBlogger(ctx context.Context, bloggerID int64) []*BlogSu
 
 	records, err := models.Articles(
 		qm.Where("blogger = ?", bloggerID),
-		qm.OrderBy("index DESC"),
+		qm.OrderBy("\"articles\".\"index\" DESC"),
 		qm.Limit(20),
 	).All(ctx, exec)
 	if err != nil {
@@ -104,7 +104,7 @@ func GetBlogComments(ctx context.Context, blogID int64) []*Comment {
 
 	records, err := models.Comments(
 		qm.Where("article = ?", blogID),
-		qm.OrderBy("index DESC"),
+		qm.OrderBy("\"comment\".\"index\" DESC"),
 	).All(ctx, exec)
 	if err != nil {
 		return nil
