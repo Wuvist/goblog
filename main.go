@@ -49,6 +49,8 @@ func main() {
 
 	// static
 	e.GET("/Template/*", echo.WrapHandler(http.FileServer(static.FS(false))))
+	e.GET("/images/img", redirectImagesToGCS)
+	e.GET("/images/img/*", redirectImagesToGCS)
 	imageZipDir := os.Getenv("images_zip_path")
 	if imageZipDir == "" {
 		imageZipDir = os.Getenv("IMAGES_ZIP_PATH")
@@ -295,4 +297,18 @@ func rewriteRequest(req *http.Request, targetPath string, params map[string]stri
 	} else {
 		req.RequestURI = targetPath
 	}
+}
+
+func redirectImagesToGCS(c echo.Context) error {
+	wildcard := c.Param("*")
+	target := "https://storage.googleapis.com/blogwind/images/img"
+	if wildcard != "" {
+		target = target + "/" + wildcard
+	} else if strings.HasSuffix(c.Request().URL.Path, "/") {
+		target = target + "/"
+	}
+	if query := c.Request().URL.RawQuery; query != "" {
+		target = target + "?" + query
+	}
+	return c.Redirect(http.StatusTemporaryRedirect, target)
 }
