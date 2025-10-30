@@ -21,7 +21,7 @@ func Home(bloggers []*tpl.Blogger) string {
 // RenderHome render skins/home.gohtml
 func RenderHome(_buffer io.StringWriter, bloggers []*tpl.Blogger) {
 	// Line: 5
-	_buffer.WriteString("\n\n<html><head>\n<title>博客风</title>\n<link rel=\"stylesheet\" href=\"/Template/skin5.css\" type=\"text/css\"> \n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n</head>\n<body bgcolor=\"ffffff\" marginwidth=\"0\" marginheight=\"0\">\n\n<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\n<tr bgcolor=\"#ffffff\">\n<td class=\"name\"  width=\"100%\" height=\"60\">博客风\n</td>\n</tr>\n</table>\n\n<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\n<tr bgcolor=\"#990000\">\n<td class=\"description\" align=\"right\" width=\"100%\" height=\"30\">感谢您还记得博客风~</td>\n</tr>\n</table>\n\n<table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\"><tr><td valign=\"top\">\n<div class=\"blog\">")
+	_buffer.WriteString("\n\n<html><head>\n<title>博客风</title>\n<link rel=\"stylesheet\" href=\"/Template/skin5.css?t=0\" type=\"text/css\"> \n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n</head>\n<body bgcolor=\"ffffff\" marginwidth=\"0\" marginheight=\"0\">\n\n<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\n<tr bgcolor=\"#ffffff\">\n<td class=\"name\"  width=\"100%\" height=\"60\">博客风\n</td>\n</tr>\n</table>\n\n<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\n<tr bgcolor=\"#990000\">\n<td class=\"description\" align=\"right\" width=\"100%\" height=\"30\">感谢您还记得博客风~</td>\n</tr>\n</table>\n\n<table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\"><tr><td valign=\"top\">\n<div class=\"blog\">")
 	for _, blogger := range bloggers {
 
 		// Line: 30
