@@ -9,6 +9,7 @@
 <TITLE>@blog.Title - @blog.CateName - @blogger.BlogName</TITLE>
 <link rel="stylesheet" href="/Template/skin5.css" type="text/css">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body bgcolor="ffffff" marginwidth="0" marginheight="0">
 
@@ -24,7 +25,8 @@
 </tr>
 </table>
 
-<table width="100%" cellpadding="0" cellspacing="0"><tr><td valign="top">
+<table class="layout layout--skin5" width="100%" cellpadding="0" cellspacing="0"><tr>
+<td class="layout__main" valign="top">
 <div class="blog">
 <p class="title">@blog.Title</p>
 	   @raw(blog.Content)
@@ -38,9 +40,8 @@
 	   </div></div>
 		}
 </div>
-</div>
-</TD>
-<TD bgColor="#e0e0b1" height="500" width="150" valign="top"><div class="side">
+</td>
+<td class="layout__side" valign="top"><div class="side">
 <div class="sidetop">
  导航
  </div> 
@@ -80,7 +81,7 @@
 <br>
 <br>
 </div>
-</TD>
+</td>
 </TR>
 </TABLE>
 </body>

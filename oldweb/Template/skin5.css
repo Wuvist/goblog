@@ -1,100 +1,191 @@
 body {
-margin: 0px;
-font-family: simsun,"宋体";
+	margin: 0;
+	font-family: simsun,"宋体",sans-serif;
+	background-color: #ffffff;
+	color: #000000;
 }
 
-.logbutton
-{
-border: 1px solid #f0e0b1;background-color: #FFFFFF;
-font-family:simsun,"宋体"; font-size: 12px; line-height: 15px;
+img {
+	max-width: 100%;
+	height: auto;
+	border: 0;
 }
 
-.loginput
-{
-BORDER: #F0e0b1 1px solid;
-WIDTH: 90px;
+.layout {
+	width: 100%;
+	border-collapse: collapse;
 }
-.log
-{
-font-family: simsun,"宋体";
-font-size:9pt;
-text-align:left;
-line-height: 14px;
+
+.layout__main,
+.layout__side {
+	vertical-align: top;
+}
+
+.layout__main {
+	padding: 0;
+}
+
+.layout__side {
+	width: 240px;
+	background-color: #e0e0b1;
+}
+
+.layout--skin5 {
+	margin: 0 auto;
+}
+
+.logbutton {
+	border: 1px solid #f0e0b1;
+	background-color: #ffffff;
+	font-family: simsun,"宋体";
+	font-size: 12px;
+	line-height: 15px;
+}
+
+.loginput {
+	border: 1px solid #f0e0b1;
+	width: 90px;
+}
+
+.log {
+	font-family: simsun,"宋体";
+	font-size: 9pt;
+	text-align: left;
+	line-height: 14px;
 }
 
 .title {
-color: #990000;
-font-family:simsun,"宋体";
-font-size:14pt;
-line-height: 17px;
-padding: 0px;
-text-align:left;
+	color: #990000;
+	font-family: simsun,"宋体";
+	font-size: 14pt;
+	line-height: 17px;
+	padding: 0;
+	text-align: left;
 }
-.name {
-color: #990000;
-font-family:simsun,"宋体";
-font-size:24px;
-line-height: 22px;
-padding: 30px;
-text-align:left;
-}
-.description {
-color: #e0e0b1;
-font-family:simsun,"宋体";
-font-size:10.5pt;
-line-height: 17px;
-padding: 10px;
-align: right;
-}
-.sidetop {
-font-family:  simsun,"宋体" bold;
-font-size: 12pt;
-color: #990000;
-border-bottom-width: 1px;
-border-bottom-style: solid;
-border-bottom-color: #000000;
-text-align: center;
-}
-.blog {
-margin-left:10px;
-margin-right: 10px;
-margin-top:10px;
-font-family:simsun,"宋体";
-font-size:10.5pt;
-line-height: 12pt;
-}
-.side{
-margin-right:5px;
-margin-left:5px;
-margin-top:10px;
-font-family:simsun,"宋体";
-font-size:10.5pt;
-line-height: 17px;
-text-align: center;
-}
-.datetimeheader {
 
-font-size: 14px;font-family:simsun,"宋体";
-font-weight: bold;
-color: #000000;
+.name {
+	color: #990000;
+	font-family: simsun,"宋体";
+	font-size: 24px;
+	line-height: 1.2;
+	padding: 30px;
+	text-align: left;
 }
+
+.description {
+	color: #e0e0b1;
+	font-family: simsun,"宋体";
+	font-size: 10.5pt;
+	line-height: 17px;
+	padding: 10px;
+	text-align: right;
+}
+
+.sidetop {
+	font-family: simsun,"宋体";
+	font-size: 12pt;
+	font-weight: bold;
+	color: #990000;
+	border-bottom: 1px solid #000000;
+	text-align: center;
+	padding: 6px 0;
+}
+
+.blog {
+	margin: 16px 24px;
+	font-family: simsun,"宋体";
+	font-size: 10.5pt;
+	line-height: 1.6;
+}
+
+.side {
+	margin: 16px;
+	font-family: simsun,"宋体";
+	font-size: 10.5pt;
+	line-height: 1.6;
+	text-align: left;
+}
+
+.datetimeheader {
+	font-size: 14px;
+	font-family: simsun,"宋体";
+	font-weight: bold;
+	color: #000000;
+}
+
 .datetimefooter {
-font-family:simsun,"宋体";
-font-size: 14px;
-color: #000000;
+	font-family: simsun,"宋体";
+	font-size: 14px;
+	color: #000000;
 }
-a:link {
-color: #990000;
-text-decoration: none;
-}
-a:visited {
-color: #990000;
-text-decoration: none;
-}
+
+a:link,
+a:visited,
 a:active {
-color: #990000;
+	color: #990000;
+	text-decoration: none;
 }
+
 a:hover {
-color: #000000;
-text-decoration: none;
-}	
+	color: #000000;
+	text-decoration: none;
+}
+
+@media screen and (min-width: 1200px) {
+	.layout--skin5 {
+		max-width: 1200px;
+	}
+
+	.blog {
+		margin-left: 40px;
+		margin-right: 40px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.name {
+		font-size: 20px;
+		padding: 20px;
+	}
+
+	.description {
+		font-size: 12pt;
+		padding: 12px 16px;
+	}
+
+	.layout__side {
+		width: 35%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		font-size: 14px;
+	}
+
+	.layout,
+	.layout tr,
+	.layout__main,
+	.layout__side {
+		display: block;
+		width: 100%;
+	}
+
+	.layout__side {
+		margin-top: 20px;
+		background-color: rgba(224, 224, 177, 0.9);
+	}
+
+	.blog {
+		margin: 15px;
+	}
+
+	.side {
+		margin: 0;
+		padding: 0 15px 20px;
+	}
+
+	.sidetop {
+		text-align: left;
+	}
+}
