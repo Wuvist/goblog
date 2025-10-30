@@ -21,30 +21,9 @@ func TestZipImageServerHandler(t *testing.T) {
 	content := []byte("hello world")
 	modTime := time.Date(2023, 10, 5, 12, 0, 0, 0, time.UTC)
 
-	zipFile, err := os.Create(archivePath)
-	if err != nil {
-		t.Fatalf("create zip: %v", err)
-	}
-
-	writer := zip.NewWriter(zipFile)
-	header := &zip.FileHeader{
-		Name:   "640/test.jpg",
-		Method: zip.Deflate,
-	}
-	header.SetModTime(modTime)
-	entryWriter, err := writer.CreateHeader(header)
-	if err != nil {
-		t.Fatalf("create header: %v", err)
-	}
-	if _, err := entryWriter.Write(content); err != nil {
-		t.Fatalf("write entry: %v", err)
-	}
-	if err := writer.Close(); err != nil {
-		t.Fatalf("close writer: %v", err)
-	}
-	if err := zipFile.Close(); err != nil {
-		t.Fatalf("close file: %v", err)
-	}
+	createZipArchive(t, archivePath, map[string][]byte{
+		"640/test.jpg": content,
+	}, modTime)
 
 	server, err := newZipImageServer(archivePath)
 	if err != nil {
@@ -94,17 +73,7 @@ func TestZipImageServerNotFound(t *testing.T) {
 	tmpDir := t.TempDir()
 	archivePath := filepath.Join(tmpDir, "images.zip")
 
-	zipFile, err := os.Create(archivePath)
-	if err != nil {
-		t.Fatalf("create zip: %v", err)
-	}
-	writer := zip.NewWriter(zipFile)
-	if err := writer.Close(); err != nil {
-		t.Fatalf("close writer: %v", err)
-	}
-	if err := zipFile.Close(); err != nil {
-		t.Fatalf("close file: %v", err)
-	}
+	createZipArchive(t, archivePath, map[string][]byte{}, time.Now())
 
 	server, err := newZipImageServer(archivePath)
 	if err != nil {
@@ -146,5 +115,110 @@ func TestCleanZipPath(t *testing.T) {
 				t.Fatalf("cleanZipPath(%q) = (%q,%v), want (%q,%v)", tc.input, got, ok, tc.want, tc.ok)
 			}
 		})
+	}
+}
+
+func TestZipMountHandler(t *testing.T) {
+	tmpDir := t.TempDir()
+	modTime := time.Date(2023, 5, 1, 9, 0, 0, 0, time.UTC)
+
+	zip640 := filepath.Join(tmpDir, "640.zip")
+	createZipArchive(t, zip640, map[string][]byte{
+		"640/a.jpg": []byte("thumb"),
+	}, modTime)
+
+	zipFull := filepath.Join(tmpDir, "full.zip")
+	createZipArchive(t, zipFull, map[string][]byte{
+		"full/a.jpg": []byte("fullsize"),
+	}, modTime)
+
+	server640, err := newZipImageServer(zip640)
+	if err != nil {
+		t.Fatalf("newZipImageServer 640: %v", err)
+	}
+	defer server640.Close()
+
+	serverFull, err := newZipImageServer(zipFull)
+	if err != nil {
+		t.Fatalf("newZipImageServer full: %v", err)
+	}
+	defer serverFull.Close()
+
+	handler := newZipMountHandler("/images/pic", map[string]*zipImageServer{
+		"640":  server640,
+		"full": serverFull,
+	})
+
+	e := echo.New()
+
+	// 640 request
+	req := httptest.NewRequest(http.MethodGet, "/images/pic/640/a.jpg", nil)
+	rec := httptest.NewRecorder()
+	if err := handler(e.NewContext(req, rec)); err != nil {
+		t.Fatalf("640 handler error: %v", err)
+	}
+	resp := rec.Result()
+	body, err := io.ReadAll(resp.Body)
+	resp.Body.Close()
+	if err != nil {
+		t.Fatalf("read 640 body: %v", err)
+	}
+	if string(body) != "thumb" {
+		t.Fatalf("unexpected 640 body: %q", body)
+	}
+
+	// full request
+	req = httptest.NewRequest(http.MethodGet, "/images/pic/full/a.jpg", nil)
+	rec = httptest.NewRecorder()
+	if err := handler(e.NewContext(req, rec)); err != nil {
+		t.Fatalf("full handler error: %v", err)
+	}
+	resp = rec.Result()
+	body, err = io.ReadAll(resp.Body)
+	resp.Body.Close()
+	if err != nil {
+		t.Fatalf("read full body: %v", err)
+	}
+	if string(body) != "fullsize" {
+		t.Fatalf("unexpected full body: %q", body)
+	}
+
+	// unknown segment
+	req = httptest.NewRequest(http.MethodGet, "/images/pic/other/a.jpg", nil)
+	rec = httptest.NewRecorder()
+	err = handler(e.NewContext(req, rec))
+	if he, ok := err.(*echo.HTTPError); !ok || he.Code != http.StatusNotFound {
+		t.Fatalf("expected not found for other segment, got %v", err)
+	}
+}
+
+func createZipArchive(t *testing.T, path string, files map[string][]byte, modTime time.Time) {
+	t.Helper()
+
+	zipFile, err := os.Create(path)
+	if err != nil {
+		t.Fatalf("create zip: %v", err)
+	}
+	defer zipFile.Close()
+
+	writer := zip.NewWriter(zipFile)
+
+	for name, content := range files {
+		header := &zip.FileHeader{
+			Name:   name,
+			Method: zip.Deflate,
+		}
+		header.SetModTime(modTime)
+		entryWriter, err := writer.CreateHeader(header)
+		if err != nil {
+			t.Fatalf("create header %s: %v", name, err)
+		}
+		if _, err := entryWriter.Write(content); err != nil {
+			t.Fatalf("write content %s: %v", name, err)
+		}
+	}
+
+	if err := writer.Close(); err != nil {
+		t.Fatalf("close writer: %v", err)
 	}
 }

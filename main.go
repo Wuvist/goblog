@@ -56,14 +56,29 @@ func main() {
 	if imageZipDir == "" {
 		imageZipDir = "../"
 	}
-	imageZipPath := filepath.Join(imageZipDir, "640.zip")
+	mounts := make(map[string]*zipImageServer)
 
-	zipServer, zipErr := newZipImageServer(imageZipPath)
-	if zipErr != nil {
-		e.Logger.Errorf("zip image server disabled (path %s): %v", imageZipPath, zipErr)
+	zip640Path := filepath.Join(imageZipDir, "640.zip")
+	if server, err := newZipImageServer(zip640Path); err != nil {
+		e.Logger.Warnf("640px image archive unavailable at %s: %v", zip640Path, err)
 	} else {
-		defer zipServer.Close()
-		e.GET("/images/pic/*", zipServer.Handler("/images/pic"))
+		defer server.Close()
+		mounts["640"] = server
+		mounts["320"] = server
+	}
+
+	zipFullPath := filepath.Join(imageZipDir, "full.zip")
+	if server, err := newZipImageServer(zipFullPath); err != nil {
+		e.Logger.Warnf("full-size image archive unavailable at %s: %v", zipFullPath, err)
+	} else {
+		defer server.Close()
+		mounts["full"] = server
+	}
+
+	if len(mounts) > 0 {
+		e.GET("/images/pic/*", newZipMountHandler("/images/pic", mounts))
+	} else {
+		e.Logger.Warnf("zip image server disabled: no archives loaded from %s", imageZipDir)
 	}
 
 	// Start server
