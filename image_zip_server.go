@@ -170,6 +170,11 @@ func newZipMountHandler(prefix string, mounts map[string]*zipImageServer) echo.H
 			return c.Redirect(http.StatusMovedPermanently, target)
 		}
 
+		if parts[0] == "100" {
+			target := trimmedPrefix + "/640/" + parts[1]
+			return c.Redirect(http.StatusMovedPermanently, target)
+		}
+
 		server, ok := mounts[parts[0]]
 		if !ok || server == nil {
 			return echo.NewHTTPError(http.StatusNotFound)
