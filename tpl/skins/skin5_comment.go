@@ -33,7 +33,7 @@ func RenderSkin5_comment(_buffer io.StringWriter, blogger *tpl.Blogger, blog *tp
 	// Line: 9
 	_buffer.WriteString(gorazor.HTMLEscStr(blogger.BlogName))
 	// Line: 9
-	_buffer.WriteString("</TITLE>\n<link rel=\"stylesheet\" href=\"/Template/skin5.css\" type=\"text/css\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body bgcolor=\"ffffff\" marginwidth=\"0\" marginheight=\"0\">\n\n<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\n<tr bgcolor=\"#ffffff\">\n<td class=\"name\"  width=\"100%\" height=\"60\">")
+	_buffer.WriteString("</TITLE>\n<link rel=\"stylesheet\" href=\"/Template/skin5.css?t=0\" type=\"text/css\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body bgcolor=\"ffffff\" marginwidth=\"0\" marginheight=\"0\">\n\n<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\n<tr bgcolor=\"#ffffff\">\n<td class=\"name\"  width=\"100%\" height=\"60\">")
 	// Line: 18
 	_buffer.WriteString(gorazor.HTMLEscStr(blogger.BlogName))
 	// Line: 18
