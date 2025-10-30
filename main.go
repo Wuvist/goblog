@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+	"path/filepath"
 	"regexp"
 	"strconv"
 	"strings"
@@ -48,6 +49,22 @@ func main() {
 
 	// static
 	e.GET("/Template/*", echo.WrapHandler(http.FileServer(static.FS(false))))
+	imageZipDir := os.Getenv("images_zip_path")
+	if imageZipDir == "" {
+		imageZipDir = os.Getenv("IMAGES_ZIP_PATH")
+	}
+	if imageZipDir == "" {
+		imageZipDir = "../"
+	}
+	imageZipPath := filepath.Join(imageZipDir, "640.zip")
+
+	zipServer, zipErr := newZipImageServer(imageZipPath)
+	if zipErr != nil {
+		e.Logger.Errorf("zip image server disabled (path %s): %v", imageZipPath, zipErr)
+	} else {
+		defer zipServer.Close()
+		e.GET("/images/pic/*", zipServer.Handler("/images/pic"))
+	}
 
 	// Start server
 	e.Logger.Fatal(e.Start(":8181"))
